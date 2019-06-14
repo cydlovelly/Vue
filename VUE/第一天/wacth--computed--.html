@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <p>
+            {{msg1}}
+        </p>
+    </div>
+</body>
+</html>
+<script>
+    var arr = 1 ;
+    var app = new Vue({
+        el:'#app',
+        data:{
+            msg:'nihaoa',   //他发生变化 35
+            antode:'llylly'
+        },
+        wacth:{       //用于异步     监听一个变量
+            msg:function(newval,oldval){
+                console.log('is newval'+ newval)
+                console.log('is oldval'+ oldval)
+            }
+        },
+        computed:{    //数据联动  监听多个变量
+            msg1:function(){
+                //这里的msg 也发生变化 
+                return ("computed:" + this.msg + this.antode) 
+            }
+        }
+    })
+</script>

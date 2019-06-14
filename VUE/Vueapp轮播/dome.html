@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/dome.js"></script>
+    <script type="text/javascript" src="../vue.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dome.css">
+</head>
+<body>
+    <!-- 轮播-->
+    <div id="box">
+        <ul class="items">
+            <li v-for="(list,i) in lists"><img :src="list" v-show=" i == n" /></li>
+        </ul>
+        <span class="left" v-on:click="upindex"><</span>
+        <span class="right" v-on:click="goindex">></span>
+        <ul class="dian">
+            <li v-for="(list,i) in lists" @click="uplist(i)" :class="{active:i == n}"></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        window.onload = function(){
+            new Vue({
+                el:"#box",
+                data:{
+                    lists:["./image/item0.jpg",
+                            "./image/item1.jpg",
+                            "./image/item2.jpg",
+                            "./image/item3.jpg",
+                            "./image/item4.jpg",
+                            "./image/item5.jpg"],
+                    n:0   //  做判断  相等于就显示
+                },
+                methods:{
+                    autoplay(){
+                        setInterval(this.goindex,3000)
+                    },
+                    goindex(){
+                        this.n++;
+                        if(this.n == this.lists.length){
+                            this.n =0 ;
+                        }
+                    },
+                    upindex(){
+                        this.n--;
+                        if(this.n < 0){
+                            this.n = 5;
+                        }
+                    },
+                    uplist(i){
+                            i = this.n;
+                    }
+                },
+                mounted(){
+                    this.autoplay()
+                }
+            })
+        }
+    </script>
+</body>
+</html>

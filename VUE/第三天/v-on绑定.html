@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+ <div id="sum">
+        <!-- 事件的监听 -->
+        <!-- <button v-on:click="count += 1">{{msg}}</button>
+        {{count}} -->
+    
+    
+    <!-- //事件的处理方法 -->
+        <!-- <button v-on:click="mecuth">点击</button> -->
+
+
+        <!-- 内联处理器中的方法 -->
+<!-- 
+        <button v-on:click="say('你好我是this')">this</button>
+        <button v-on:click="say('你好我是whth')">whth</button> -->
+<!-- 
+    停止事件传播
+    <button v-on:click.stop="detihs"></button>
+    提交事件不在从新加载页面
+    <button v-on:submit.prevent="onSubmit"></button>
+    修饰符可以串联
+    <button v-on:click.stop.prevent="dethis"></button>
+
+    子可以修饰
+    <button v-on:submit.prevent="dethis"></button>
+
+    添加事件监听器时使用事件捕获模式
+即元素自身触发的事件先在此处理，然后才交由内部元素进行处理
+
+<div v-on:click.capture="dethis">..</div>
+
+只当在 event.target 是当前元素自身时触发处理函数
+即事件不是从内部元素触发的
+<div v-on:click.self="dethis">...</div>
+
+点击事件只会触发一次
+<button v-on:clicki.once="dethis"></button>
+
+//这个 .passive 修饰符尤其能够提升移动端的性能。
+//Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符。
+滚动事件的默认行为 (即滚动行为) 将会立即触发
+而不会等待 `onScroll` 完成 
+这其中包含 `event.preventDefault()` 的情况
+
+<div v-on:scroll.passive="onscrool">...</div> -->
+
+
+
+<!-- 按键修饰符 -->
+
+<!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
+<inpute v-on:keyup.enter="submit"></inpute>
+
+<!-- 你可以直接将 KeyboardEvent.key 暴露的任意有效按键名转换为 kebab-case 来作为修饰符。 -->
+<input v-on:keyup.pege-down="dethis">
+
+<!-- 为了在必要的情况下支持旧浏览器，Vue 提供了绝大多数常用的按键码的别名： -->
+
+<input v-on:keyup.13="dethis">
+<!-- 键名 -->
+<!-- 你还可以通过全局 config.keyCodes 对象自定义按键修饰符别名： -->
+
+    <!-- Vue.config.keyCodes.f1 =112 -->
+
+</div>  
+</body>
+</html>
+<script>
+
+    //事件的监听
+    // var pp =new Vue({
+    //     el:"#sum",
+    //     data:{
+    //         msg:"点击",
+    //         count:0
+    //     },
+    //     methods:{
+    //         medata:function(){}
+    //     }
+    // })
+    
+    // 事件的处理方法
+    // var pp = new Vue({
+    //     el:"#sum",
+    //     data:{
+    //         name:"vue.技术"
+    //     },
+    //     methods:{
+    //         mecuth:function(event){
+
+
+    //             alert("hello" + this.name)
+    //             if(event){
+    //                 alert(event.target.tarName)
+    //             }
+    //         }
+    //     }
+    // })
+
+
+     //内联处理器中的方法
+        // var pp = new Vue({
+        //     el:'#sum',
+        //     methods:{
+        //         say:function(msg){
+        //             alert(msg)
+        //         }
+        //     }
+        // })
+
+       //停止事件传播
+
+</script>

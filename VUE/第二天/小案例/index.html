@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../vue.js"></script>
+    <title>点击</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .img{
+            width: 200px;
+            height: 540px;
+            background: url(bag.png);
+            margin: 0 auto;
+        }
+        .box{
+            width: 400px;
+            height: 40px;
+            border: 2px solid #666;
+            margin: 0 auto;
+        }
+        .box div{
+            width: 400px;
+            height: 40px;
+            background: #aafeaa;
+        }
+        h1{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .img.active{
+            background: url(bag-burst.png);
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- 图片 -->
+    <div class="img" v-on:click="pund" v-bind:class="{active:flag}"></div>
+    <!-- 进度条 -->
+    <div class="box" v-on:click="fode">
+        <div v-bind:style="{width:headle + '%'}"></div>
+    </div>
+    <h1>点击进度条从新开始</h1>
+</div>
+</body>
+</html>
+<script>
+    window.onload =function(){
+        var app = new Vue({
+        el:'#app',
+        data:{
+            headle:100,
+            flag:false
+        },
+        methods:{
+            pund(){
+                this.headle -=10
+                if(this.headle <= 0){
+                    this.flag = true
+                }
+            },
+            fode(){
+                this.headle = 100
+                this.flag = false
+            }
+        }
+
+    })
+    }
+    
+</script>

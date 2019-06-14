@@ -1,0 +1,1634 @@
+
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.cfg_description/}" />
+    <meta name="description" content="{dede:global.cfg_keywords/}" />
+    <link href="/templets/mobana/css/css_structure.css" rel="stylesheet" />
+    <link href="/templets/mobana/css/css.css" rel="stylesheet" />
+    <script src="/templets/mobana/js/jqwithval.js"></script>
+    <script src="/templets/mobana/js/1.js" type="text/javascript"></script>
+    <script src="/templets/mobana/js/ssss.js"></script>
+
+    <script src="/templets/mobana/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/templets/mobana/js/kxbdMarquee.js"></script>
+    <script src="/templets/mobana/js/jquery.kxbdsupermarquee.js"></script>
+    <script src="/templets/mobana/js/adver.js"></script>
+    <script src="/templets/mobana/js/purl.min.js"></script>
+    <script src="/templets/mobana/js/jquery.scrollLoading-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    </script>
+    <script language="javascript" src="/templets/mobana/js/common.js?rightButton=0"></script>
+    <script src="/templets/mobana/js/jquery.colorbox-min.js"></script>
+    
+    <link rel="stylesheet" href="/templets/mobana/css/animate.min.css">
+    <script type="text/javascript" src="/templets/mobana/js/validate.js"></script>
+    <script src="/templets/mobana/js/wow.min.js"></script>
+    <style>
+        .pro_sort .third_box {
+            display: none;
+        }
+
+        .pro_sort .active .third_box {
+            display: block;
+        }
+    </style>
+
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+        //增加导航固定模式，使导航跟随滚动条滚动
+        jQuery(window).scroll(function(){
+                var sTop=jQuery(document).scrollTop();
+                if(sTop>=42){
+                    $("#topNav").addClass("nav_fixed");
+                }
+                else{
+                    $("#topNav").removeClass("nav_fixed");
+                }
+        });
+        
+    });
+</script>
+    <!--[if IE 6]>
+    <script src="/Scripts/DD_belatedPNG_0.0.8a.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix("*");</script>
+    <![endif]-->
+    <style>
+    .touch-btn {
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
+
+    .touch-box {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        z-index: 600;
+        color: #777;
+        display: none;
+    }
+
+    .touch-btn:hover .touch-box {
+        display: block;
+    }
+
+    .touch-box .arrow {
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        display: block;
+        height: 0;
+        position: absolute;
+        right: 46px;
+        top: -6px;
+    }
+
+    .touch-box .wrap {
+        padding: 20px 0; /*width:280px;*/
+        background: #fff;
+        border-radius: 2px;
+        border: 1px solid #eee;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .touch-box .wrap .ms {
+            padding: 0 0 15px;
+        }
+
+        .touch-box .wrap .wenben {
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        .touch-box .wrap h1 {
+            font-size: 16px;
+            margin: 0;
+            color: #111;
+        }
+
+        .touch-box .wrap .code img {
+            width: 120px;
+            height: 120px;
+        }
+        /**.touch-box .wrap .code li{width:50%;float:left}*/
+        .touch-box .wrap table {
+            width: 100%;
+        }
+
+            .touch-box .wrap table td {
+                padding: 0 15px;
+                border-right: 1px solid #ddd;
+            }
+
+                .touch-box .wrap table td:last-child {
+                    border-right: 0;
+                }
+</style>
+<style type="text/css">
+        .vrlogo {
+            float: left;
+            margin: 20px 0;
+         }
+
+            .vrlogo img {
+                float: left;
+                margin-right: 20px;
+            }
+
+            .vrlogo h3 {
+                float: left;
+                color: #4c4c4c;
+                font-size: 40px;
+                line-height: 66px;
+            }
+
+        .sTel {
+            float: right;
+            margin: 20px 0;
+        }
+
+            .sTel p {
+                color: #4c4c4c;
+                font-size: 14px;
+            }
+
+            .sTel em {
+                display: block;
+                color: #cda84a;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: bold;
+            }
+
+        .header.vr {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+
+            
+     {dede:include filename="head.htm"/}       
+            
+
+<script type="text/javascript">
+    var isOn = false;
+    var navList = $('.nav>ul>li>a') || [];
+    for (var i = 0; i < navList.length; i++)
+    {
+        if (navList[i].pathname == location.pathname) {
+            $(navList[i]).addClass("current");
+            isOn = true;
+            break;
+        }
+    }
+    if (!isOn) {
+        eval('var menuStates = [] || []');
+        for (var i = 0; i < navList.length; i++) {
+            if (navList[i].pathname == menuStates[menuStates.length-1]) {
+                $(navList[i]).addClass("current");
+                isOn = true;
+                break;
+            }
+        }
+        if (!isOn)
+        {
+            for (var i = 0; i < navList.length; i++) {
+                if ($.inArray(navList[i].pathname, menuStates) > -1) {
+                    $(navList[i]).addClass("current");
+                    isOn = true;
+                    break;
+                }
+            }
+        }
+    }
+</script>
+                    </ul>
+                </div>
+            </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //增加导航固定模式，使导航跟随滚动条滚动
+                        jQuery(window).scroll(function(){
+                            var sTop=jQuery(document).scrollTop();
+                            if(sTop>=42){
+                                $("#topNav").addClass("nav_fixed");
+                                $(".HOT-KEYS").addClass("HOT-KEYS-ADD");
+                            }
+                            else{
+                                $("#topNav").removeClass("nav_fixed");
+                                $(".HOT-KEYS").removeClass("HOT-KEYS-ADD");
+                            }
+                        });
+
+                    });
+                </script>
+                    <div class="HOT-KEYS" id="HOT">
+                <div class="searchformBox">
+                    <form method="get" action="/search.html" name="searchForm">
+                        <input class="serach_input" maxlength="30" size="30" placeholder=请输入搜索关键词！
+                               name="searchKeyword" type="text" />
+                        <input class="btn_serach" value="" type="submit" />
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    <div class='banner' id="banner">
+                <span class='left-shadow'></span><span class='right-shadow'></span><div>
+                    <script language='javascript'>bannerShow(7, 1920, 400, "5000", '1541')</script>
+
+                </div><div class='blank-area'></div>
+            </div>
+        
+
+<div class="main-home">
+    <a href="javascript:void(0);" rel="nofollow" class="home_prev" id="home_prev"></a>
+    <a href="javascript:void(0);" rel="nofollow" class="home_next" id="home_next"></a>
+    <div class="main-top"></div>
+    <div class="main home clearfix">
+        <div id="div_10583" class=" clearfix" style="width:100%;  background-color:#fcf8f0;   margin:0px auto 0px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10584" style="width:1200px;     margin:0px auto 0px auto;padding:50px 0px 50px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10585" style="width:220px;     margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;float:left; overflow:hidden;zoom:1">
+                <div class="iFCB-category" >
+                        <div class="title">
+                            <div class="title_more">产品中心</div>
+                        </div>
+                    <div class="content">
+
+                            <div class="pro_sort">
+                                <div style="height:1634px">
+                                    <div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/14710.html' title='徽财贡酒' target='' style=''>徽财贡酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div><div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/14703.html' title='定制酒' target='' style=''>定制酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div><div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/21221.html' title='唐坊酒' target='' style=''>唐坊酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div><div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/21486.html' title='古家美酒' target='' style=''>古家美酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div><div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/20773.html' title='坛子酒' target='' style=''>坛子酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div><div class="each_li">
+            <div class="name"><div class="icon"><a href='/info/21520.html' title='人参酒' target='' style=''>人参酒</a>
+</div></div>
+        <div class="third_box">
+        </div>
+        </div>
+                                </div>
+                                    <div class="promore"><a href='/info/14702.html'>更多分类</a></div>
+
+                            </div>
+                            <script type="text/javascript">
+                                var each_li = $('#div_10585 .pro_sort .each_li');
+                                for (var i = 0; i < each_li.length; i++) {
+                                    var li = each_li[i];
+                                    if (li.children[1]) {
+                                        var length = li.children[1].children.length;
+                                        if (length > 0) {
+                                            if ('False' == 'False') {
+                                                li.className = "each_li active";
+                                            }
+                                            li.title = "";
+                                        }
+                                        else {
+                                            var li_name = li.children[0].children[0];
+                                            li_name.className = "";
+                                            var href = li_name.children[0].href;
+                                            li.title = href;
+                                        }
+                                    }
+                                }
+                                $('#div_10585 .pro_sort .each_li .third_box').click(function (event) {
+                                    event.stopPropagation();
+                                });
+                                $('#div_10585 .pro_sort .each_li').click(function () {
+                                    var title = $(this).prop("title")
+                                    if (title == "") {
+                                        $(this).toggleClass('active');
+                                    }
+                                    else {
+                                        location.href = title;
+
+                                    }
+
+
+                                });
+                            </script>
+                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10586" style="width:960px;  background-color:#f9f9f9;   margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;float:right; overflow:hidden;zoom:1">
+                <div class="iFCB-u-tt" >
+                    <div class="content">
+
+                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-u-tt" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/14710.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">徽财贡酒</div>
+                        </div>
+                    <div class="content">
+
+<div class='marquee' id=marquee14710_j2fb style='width:1000px;height:300px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95377.html' title='徽财贡酒（接待专用）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783014335348859_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财贡酒（接待专用）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95377.html' title='徽财贡酒（接待专用）' target='_self' style=''>徽财贡酒（接待专用）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94137.html' title='徽财贡酒(吉祥）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371076496667_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财贡酒(吉祥）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94137.html' title='徽财贡酒(吉祥）' target='_self' style=''>徽财贡酒(吉祥）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95376.html' title='徽财' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783014333473425_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95376.html' title='徽财' target='_self' style=''>徽财</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94138.html' title='徽财贡酒(经典）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371078371817_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财贡酒(经典）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94138.html' title='徽财贡酒(经典）' target='_self' style=''>徽财贡酒(经典）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94136.html' title='徽财贡酒(纪念）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371071652534_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财贡酒(纪念）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94136.html' title='徽财贡酒(纪念）' target='_self' style=''>徽财贡酒(纪念）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94135.html' title='徽财贡酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371069620981_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='徽财贡酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94135.html' title='徽财贡酒' target='_self' style=''>徽财贡酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee14710_j2fb').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee14710_j2fb.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-u-tt" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/14703.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">定制酒</div>
+                        </div>
+                    <div class="content">
+
+<div class='marquee' id=marquee14703_3peb style='width:1000px;height:300px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95514.html' title='定制酒（特供）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043796713805_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（特供）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95514.html' title='定制酒（特供）' target='_self' style=''>定制酒（特供）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95513.html' title='定制酒（上汽集团）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043794838669_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（上汽集团）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95513.html' title='定制酒（上汽集团）' target='_self' style=''>定制酒（上汽集团）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95512.html' title='定制酒（战友联谊专供）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043793588560_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（战友联谊专供）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95512.html' title='定制酒（战友联谊专供）' target='_self' style=''>定制酒（战友联谊专供）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95133.html' title='春夏秋冬' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485063394936_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='春夏秋冬' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95133.html' title='春夏秋冬' target='_self' style=''>春夏秋冬</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95132.html' title='窖藏1973' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485061676053_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='窖藏1973' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95132.html' title='窖藏1973' target='_self' style=''>窖藏1973</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95131.html' title='养生酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485059957468_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='养生酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95131.html' title='养生酒' target='_self' style=''>养生酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95130.html' title='境界' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485058707065_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='境界' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95130.html' title='境界' target='_self' style=''>境界</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95129.html' title='节日酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485056988480_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='节日酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95129.html' title='节日酒' target='_self' style=''>节日酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95128.html' title='侠客酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485055582113_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='侠客酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95128.html' title='侠客酒' target='_self' style=''>侠客酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95031.html' title='定制酒类别' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782475027505219_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒类别' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95031.html' title='定制酒类别' target='_self' style=''>定制酒类别</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95030.html' title='定制酒（窖26藏）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782475025786317_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（窖26藏）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95030.html' title='定制酒（窖26藏）' target='_self' style=''>定制酒（窖26藏）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95029.html' title='定制酒（纪念酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782475023442375_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（纪念酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95029.html' title='定制酒（纪念酒）' target='_self' style=''>定制酒（纪念酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95028.html' title='定制酒（集团专用酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782475021567234_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（集团专用酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95028.html' title='定制酒（集团专用酒）' target='_self' style=''>定制酒（集团专用酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95027.html' title='定制酒（内部专用酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782475019848379_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（内部专用酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95027.html' title='定制酒（内部专用酒）' target='_self' style=''>定制酒（内部专用酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94283.html' title='定制酒（喜酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782397534050413_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（喜酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94283.html' title='定制酒（喜酒）' target='_self' style=''>定制酒（喜酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/93486.html' title='定制酒（中国石化）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782341163824076_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（中国石化）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/93486.html' title='定制酒（中国石化）' target='_self' style=''>定制酒（中国石化）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89618.html' title='定制酒（内部专供）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778926710374695_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（内部专供）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89618.html' title='定制酒（内部专供）' target='_self' style=''>定制酒（内部专供）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89617.html' title='定制酒（建安集团）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778926708968350_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（建安集团）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89617.html' title='定制酒（建安集团）' target='_self' style=''>定制酒（建安集团）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89616.html' title='定制酒（婚礼用酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778926707405439_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='定制酒（婚礼用酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89616.html' title='定制酒（婚礼用酒）' target='_self' style=''>定制酒（婚礼用酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee14703_3peb').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee14703_3peb.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-u-tt" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/21221.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">唐坊酒</div>
+                        </div>
+                    <div class="content">
+
+<div class='marquee' id=marquee21221_bfc3 style='width:1000px;height:300px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95420.html' title='唐坊（来一坛）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783029510497115_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（来一坛）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95420.html' title='唐坊（来一坛）' target='_self' style=''>唐坊（来一坛）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95419.html' title='唐坊（5年陈酿）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783029509247025_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（5年陈酿）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95419.html' title='唐坊（5年陈酿）' target='_self' style=''>唐坊（5年陈酿）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95418.html' title='唐坊（唐坊窖30年）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783029507215603_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（唐坊窖30年）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95418.html' title='唐坊（唐坊窖30年）' target='_self' style=''>唐坊（唐坊窖30年）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94162.html' title='唐坊20' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371819247179_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊20' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94162.html' title='唐坊20' target='_self' style=''>唐坊20</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94161.html' title='唐坊10' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371817684554_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊10' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94161.html' title='唐坊10' target='_self' style=''>唐坊10</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94160.html' title='唐坊30' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371815652867_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊30' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94160.html' title='唐坊30' target='_self' style=''>唐坊30</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94159.html' title='唐坊（典藏）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371813777745_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（典藏）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94159.html' title='唐坊（典藏）' target='_self' style=''>唐坊（典藏）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94158.html' title='唐坊（9年原浆）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371812215371_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（9年原浆）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94158.html' title='唐坊（9年原浆）' target='_self' style=''>唐坊（9年原浆）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94157.html' title='唐坊（6年原浆）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371810496600_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（6年原浆）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94157.html' title='唐坊（6年原浆）' target='_self' style=''>唐坊（6年原浆）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94156.html' title='唐坊（私藏吉祥瓶）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371808777601_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（私藏吉祥瓶）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94156.html' title='唐坊（私藏吉祥瓶）' target='_self' style=''>唐坊（私藏吉祥瓶）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94155.html' title='唐坊（私藏经典瓶）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371805808320_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（私藏经典瓶）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94155.html' title='唐坊（私藏经典瓶）' target='_self' style=''>唐坊（私藏经典瓶）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94154.html' title='唐坊（快乐）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371803620933_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（快乐）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94154.html' title='唐坊（快乐）' target='_self' style=''>唐坊（快乐）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94153.html' title='唐坊（基酒）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371802058052_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（基酒）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94153.html' title='唐坊（基酒）' target='_self' style=''>唐坊（基酒）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94152.html' title='唐坊（大磨砂）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371799558099_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（大磨砂）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94152.html' title='唐坊（大磨砂）' target='_self' style=''>唐坊（大磨砂）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94151.html' title='唐坊（30年原浆）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371797995478_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（30年原浆）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94151.html' title='唐坊（30年原浆）' target='_self' style=''>唐坊（30年原浆）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94150.html' title='唐坊（大唐荣耀）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371796120342_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（大唐荣耀）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94150.html' title='唐坊（大唐荣耀）' target='_self' style=''>唐坊（大唐荣耀）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94149.html' title='唐坊窖（V系列-V10)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371794713979_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（V系列-V10)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94149.html' title='唐坊窖（V系列-V10)' target='_self' style=''>唐坊窖（V系列-V10)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94148.html' title='唐坊窖（V系列-V16)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371792838825_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（V系列-V16)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94148.html' title='唐坊窖（V系列-V16)' target='_self' style=''>唐坊窖（V系列-V16)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94147.html' title='唐坊窖（V系列-V20)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371790807123_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（V系列-V20)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94147.html' title='唐坊窖（V系列-V20)' target='_self' style=''>唐坊窖（V系列-V20)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94146.html' title='唐坊窖（爱国系列)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371788776004_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（爱国系列)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94146.html' title='唐坊窖（爱国系列)' target='_self' style=''>唐坊窖（爱国系列)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94145.html' title='唐坊窖（爱国系列1)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371787213104_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（爱国系列1)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94145.html' title='唐坊窖（爱国系列1)' target='_self' style=''>唐坊窖（爱国系列1)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94144.html' title='唐坊窖（新原浆系列-8年原浆)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371785494487_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（新原浆系列-8年原浆)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94144.html' title='唐坊窖（新原浆系列-8年原浆)' target='_self' style=''>唐坊窖（新原浆系列-8年原浆)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94143.html' title='唐坊窖（新原浆系列-18年原浆)' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371783931587_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊窖（新原浆系列-18年原浆)' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94143.html' title='唐坊窖（新原浆系列-18年原浆)' target='_self' style=''>唐坊窖（新原浆系列-18年原浆)</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94142.html' title='唐坊（来一坛）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371782056698_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（来一坛）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94142.html' title='唐坊（来一坛）' target='_self' style=''>唐坊（来一坛）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94141.html' title='唐坊（5年陈酿）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371780025313_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（5年陈酿）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94141.html' title='唐坊（5年陈酿）' target='_self' style=''>唐坊（5年陈酿）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94140.html' title='唐坊（唐坊窖30年）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782371778618946_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='唐坊（唐坊窖30年）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94140.html' title='唐坊（唐坊窖30年）' target='_self' style=''>唐坊（唐坊窖30年）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee21221_bfc3').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee21221_bfc3.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-u-tt" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/21486.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">古家美酒</div>
+                        </div>
+                    <div class="content">
+
+<div class='marquee' id=marquee21486_cj8p style='width:1000px;height:300px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94212.html' title='古家美酒-中国梦' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386373409058_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-中国梦' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94212.html' title='古家美酒-中国梦' target='_self' style=''>古家美酒-中国梦</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94211.html' title='古家美酒-生态原浆26年' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386371690189_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-生态原浆26年' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94211.html' title='古家美酒-生态原浆26年' target='_self' style=''>古家美酒-生态原浆26年</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94210.html' title='古家美酒-中国红' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386370127559_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-中国红' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94210.html' title='古家美酒-中国红' target='_self' style=''>古家美酒-中国红</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94209.html' title='古家美酒-原浆30年' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386367783617_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-原浆30年' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94209.html' title='古家美酒-原浆30年' target='_self' style=''>古家美酒-原浆30年</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94208.html' title='古家美酒-高端商务' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386365908229_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-高端商务' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94208.html' title='古家美酒-高端商务' target='_self' style=''>古家美酒-高端商务</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94166.html' title='生态原浆(吉16祥）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782372381957430_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='生态原浆(吉16祥）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94166.html' title='生态原浆(吉16祥）' target='_self' style=''>生态原浆(吉16祥）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94207.html' title='古家美酒-原浆20年' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386363720787_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-原浆20年' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94207.html' title='古家美酒-原浆20年' target='_self' style=''>古家美酒-原浆20年</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94206.html' title='古家美酒-九五至尊' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386361845367_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-九五至尊' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94206.html' title='古家美酒-九五至尊' target='_self' style=''>古家美酒-九五至尊</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94165.html' title='生态原浆(经16典）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782372379926013_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='生态原浆(经16典）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94165.html' title='生态原浆(经16典）' target='_self' style=''>生态原浆(经16典）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94205.html' title='古家美酒-古家情缘' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386360126503_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-古家情缘' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94205.html' title='古家美酒-古家情缘' target='_self' style=''>古家美酒-古家情缘</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94204.html' title='古家美酒-富贵家' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386357782821_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-富贵家' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94204.html' title='古家美酒-富贵家' target='_self' style=''>古家美酒-富贵家</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94164.html' title='生态原浆(26年）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782372377738319_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='生态原浆(26年）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94164.html' title='生态原浆(26年）' target='_self' style=''>生态原浆(26年）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94203.html' title='古家美酒-窖藏30年' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386355751408_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-窖藏30年' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94203.html' title='古家美酒-窖藏30年' target='_self' style=''>古家美酒-窖藏30年</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94202.html' title='古家美酒-生态原浆30年' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386354032232_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-生态原浆30年' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94202.html' title='古家美酒-生态原浆30年' target='_self' style=''>古家美酒-生态原浆30年</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94201.html' title='古家美酒-飞龙在天' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386352001094_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-飞龙在天' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94201.html' title='古家美酒-飞龙在天' target='_self' style=''>古家美酒-飞龙在天</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94163.html' title='生态原浆(8年）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782372375706948_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='生态原浆(8年）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94163.html' title='生态原浆(8年）' target='_self' style=''>生态原浆(8年）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94200.html' title='古家美酒-金花瓷' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386350125963_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-金花瓷' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94200.html' title='古家美酒-金花瓷' target='_self' style=''>古家美酒-金花瓷</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/94199.html' title='古家美酒-封坛原浆' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782386347781764_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='古家美酒-封坛原浆' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/94199.html' title='古家美酒-封坛原浆' target='_self' style=''>古家美酒-封坛原浆</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee21486_cj8p').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee21486_cj8p.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-u-tt" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/20773.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">坛子酒</div>
+                        </div>
+                    <div class="content">
+
+<div class='marquee' id=marquee20773_37hd style='width:1000px;height:300px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95639.html' title='财源广进' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783059355838043_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='财源广进' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95639.html' title='财源广进' target='_self' style=''>财源广进</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95638.html' title='大道之行' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783059354119146_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='大道之行' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95638.html' title='大道之行' target='_self' style=''>大道之行</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95637.html' title='私酿瓷藏' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783059352087742_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='私酿瓷藏' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95637.html' title='私酿瓷藏' target='_self' style=''>私酿瓷藏</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95636.html' title='洞藏' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783059350056041_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='洞藏' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95636.html' title='洞藏' target='_self' style=''>洞藏</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95635.html' title='纪念酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783059347868650_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='纪念酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95635.html' title='纪念酒' target='_self' style=''>纪念酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95510.html' title='坛子酒（福）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043557940018_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（福）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95510.html' title='坛子酒（福）' target='_self' style=''>坛子酒（福）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95509.html' title='坛子酒（诚信发财）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043555752078_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（诚信发财）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95509.html' title='坛子酒（诚信发财）' target='_self' style=''>坛子酒（诚信发财）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95508.html' title='坛子酒（坐地生财）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043554345957_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（坐地生财）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95508.html' title='坛子酒（坐地生财）' target='_self' style=''>坛子酒（坐地生财）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95507.html' title='坛子酒' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043552627074_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95507.html' title='坛子酒' target='_self' style=''>坛子酒</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95506.html' title='坛子酒（家和万事兴）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783043547939199_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（家和万事兴）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95506.html' title='坛子酒（家和万事兴）' target='_self' style=''>坛子酒（家和万事兴）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/95134.html' title='年份原浆' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636782485065114107_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='年份原浆' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/95134.html' title='年份原浆' target='_self' style=''>年份原浆</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91581.html' title='坛子酒（天下第一福）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770550685113_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（天下第一福）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91581.html' title='坛子酒（天下第一福）' target='_self' style=''>坛子酒（天下第一福）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91580.html' title='坛子酒（人参如意）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770548966205_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（人参如意）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91580.html' title='坛子酒（人参如意）' target='_self' style=''>坛子酒（人参如意）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91579.html' title='坛子酒（凤凰坛5斤）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770547247330_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（凤凰坛5斤）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91579.html' title='坛子酒（凤凰坛5斤）' target='_self' style=''>坛子酒（凤凰坛5斤）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91578.html' title='坛子酒（大师酿造3斤）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770545215878_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（大师酿造3斤）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91578.html' title='坛子酒（大师酿造3斤）' target='_self' style=''>坛子酒（大师酿造3斤）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91577.html' title='坛子酒（大师酿造）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770543653033_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（大师酿造）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91577.html' title='坛子酒（大师酿造）' target='_self' style=''>坛子酒（大师酿造）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/91576.html' title='坛子酒（春江秋韵5斤）' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636779770541778207_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='坛子酒（春江秋韵5斤）' class="intro-info-img " height='250' width='250'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/91576.html' title='坛子酒（春江秋韵5斤）' target='_self' style=''>坛子酒（春江秋韵5斤）</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee20773_37hd').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee20773_37hd.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10598" class=" clearfix" style="width:100%;     margin:0px auto 0px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-ad" >
+                    <div class="content">
+
+<div class="ibw_intro"><div style="text-align:center;">
+    <a href="/info/14702.html" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783284622438504.jpg" alt="" /></a><a href="/info/14702.html" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783284623532342.jpg" alt="" /></a><br />
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10591" class=" clearfix" style="width:100%;  background-color:#fcf8f0;   margin:0px auto 0px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10592" style="width:1200px;     margin:0px auto 0px auto;padding:70px 0px 0px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-title  " >
+                    <div class="content">
+
+<div class="ibw_intro"><div class="title-wp">
+<div class="title">
+    <h2>
+        客户案例
+    </h2>
+</div>
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-design" >
+                    <div class="content">
+
+<div class='marquee' id=marquee14715_82gt style='width:1200px;height:370px;overflow:hidden;'><div class="iFCB-pro">
+    <div class="bd">
+        <ul class="iFCB-TPLB clearfix">
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89268.html' title='河北某超市' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778877362381538_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='河北某超市' class="intro-info-img " height='280' width='280'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89268.html' title='河北某超市' target='_self' style=''>河北某超市</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89267.html' title='山西某代理商' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778877361287485_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='山西某代理商' class="intro-info-img " height='280' width='280'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89267.html' title='山西某代理商' target='_self' style=''>山西某代理商</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89266.html' title='山东某代理商' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778877359881317_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='山东某代理商' class="intro-info-img " height='280' width='280'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89266.html' title='山东某代理商' target='_self' style=''>山东某代理商</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89265.html' title='河北某代理商' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778877358787222_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='河北某代理商' class="intro-info-img " height='280' width='280'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89265.html' title='河北某代理商' target='_self' style=''>河北某代理商</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="iFCB-PRO-4 clearfix">
+                            <div class="iFCB-rp">
+                                <div class="m-pic"><a href='/display/89264.html' title='河南某代理商' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778877357068608_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='河南某代理商' class="intro-info-img " height='280' width='280'></a></div>
+                                <dl>
+                                    <dt class="u-tt"><a href='/display/89264.html' title='河南某代理商' target='_self' style=''>河南某代理商</a>
+            </dt>
+                                </dl>
+                            </div>
+                        </li>
+
+        </ul>
+    </div>
+</div></div><script type='text/javascript'>jQuery('#marquee14715_82gt').slide({mainCell:'.bd ul',autoPlay:true,effect:'leftMarquee',vis:'4',interTime:'30',trigger:'click'});$('#marquee14715_82gt.bd .thumb_list').css('width','2000px');</script>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10587" class=" clearfix" style="width:100%;     margin:0px auto 10px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10588" style="width:1200px;     margin:0px auto 30px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+                <div >
+                    <div class="content">
+
+<div class="ibw_intro"><div style="text-align:center;">
+    <img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917708620884.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917710026874.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917711277272.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917711902318.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917713464929.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917714558771.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917715965138.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917716589900.jpg" alt="" /><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636783917717215224.jpg" alt="" /><br />
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10599" class="m-abt clearfix" style="width:100%;   background-image:url(&#39;http://M61215.m151.ibw.cc/u/bf8d0ecb-5e89-4218-bc73-4c0d336371fe/image/636471320103180111.png&#39;); background-repeat: no-repeat; background-position: 50% 0;  margin:0px auto 0px auto;padding:70px 0px 30px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-title" >
+                    <div class="content">
+
+<div class="ibw_intro"><div class="title-wp">
+<div class="title">
+    <h2>
+        关于我们
+    </h2>
+</div>
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-abt clearfix" >
+                    <div class="content">
+
+<div class="TW_CONTENT">
+    <dl class="m-intro">
+        <dd class="u-des">徽财贡酒系列酒属于唐坊酒业新款酒。 亳州市唐坊酒业有限公司徽财贡酒系列酒座落在中国的美酒之乡—亳州市古井镇，该公司成立于1993年，是专业从事白酒生产于销售的企业新建一期工程酿酒、包装一条龙的环境优美的现代化企业，产品深受广大消费者的赞誉！ 亳州是历史文化名城，具有3700多年的历史，自古以来，人杰地灵，物华天宝，道教先哲老子、庄子、一代英豪曹操、花木兰、神医华佗皆诞生于此。 古井镇是中国名酒产地...</dd>
+        <dd class="u-more"><a href="/info/14717.html"><script>document.write(T("查看详情"))</script></a></dd>
+    </dl>
+    <div class="m-pic"><a href='/info/14717.html' title='关于我们' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778885474847283.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='关于我们' class="intro-info-img " height='220' width='1122'></a></div>
+</div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10594" class=" clearfix" style="width:100%;     margin:0px auto 30px auto;padding:30px 0px 30px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10595" style="width:1200px;     margin:0px auto 0px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10596" style="width:590px;     margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;float:left; overflow:hidden;zoom:1">
+                <div class="iFCB-u-tt iFCB-news" >
+                        <div class="title">
+                            <div class="title_more">常见问题</div>
+                        </div>
+                    <div class="content">
+
+<div class="TTXW_CONTENT">
+    <div class="m-pic"><a href='/display/89358.html' title='为什么送礼大多数会选择白酒呢？' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636783922385860420.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='为什么送礼大多数会选择白酒呢？' class="intro-info-img " height='200' width='200'></a></div>
+    <dl class="m-intro">
+        <dt class="u-tt"><a href='/display/89358.html' title='为什么送礼大多数会选择白酒呢？' target='_self' style=''>为什么送礼大多数会选择白酒呢？</a>
+</dt>
+        <dd class="u-des">白酒禁得住时间的存放，而且越放越醇越香，值得在家珍藏供奉，除了能得到品质上的升华以外，升值空间也值得...</dd>
+<dd class="u-more"><a href="/display/89358.html"><script>document.write(T("查看详情"))</script></a></dd>
+    </dl>
+</div>
+<div class="TTXW_LIST">
+    <ul>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89357.html' title='白酒的贮藏该如何选择？' target='_self' style=''>白酒的贮藏该如何选择？</a>
+
+                </li>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89356.html' title='如何做到喝酒不伤身？' target='_self' style=''>如何做到喝酒不伤身？</a>
+
+                </li>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89355.html' title='如何辨别散装酒的好坏？' target='_self' style=''>如何辨别散装酒的好坏？</a>
+
+                </li>
+
+    </ul>
+</div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10597" style="width:590px;     margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;float:right; overflow:hidden;zoom:1">
+                <div class="iFCB-u-tt iFCB-news" >
+                        <div class="title">
+                            <div class="title_more">行业资讯</div>
+                        </div>
+                    <div class="content">
+
+<div class="TTXW_CONTENT">
+    <div class="m-pic"><a href='/display/89354.html' title='传统酿酒对粮食的选择' target="_self"><img data-url='{dede:global.cfg_templets_skin/}/images/636778892848847843_small.jpg' src="{dede:global.cfg_templets_skin/}/images/pixel.gif" alt='传统酿酒对粮食的选择' class="intro-info-img " height='200' width='200'></a></div>
+    <dl class="m-intro">
+        <dt class="u-tt"><a href='/display/89354.html' title='传统酿酒对粮食的选择' target='_self' style=''>传统酿酒对粮食的选择</a>
+</dt>
+        <dd class="u-des">无论是传统工艺还是新工艺，对粮食选择的要求都是一致的，凡是含有淀粉或糖分的粮食都可以酿酒。新工艺酿酒...</dd>
+<dd class="u-more"><a href="/display/89354.html"><script>document.write(T("查看详情"))</script></a></dd>
+    </dl>
+</div>
+<div class="TTXW_LIST">
+    <ul>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89353.html' title='了解传统酿酒工艺流程' target='_self' style=''>了解传统酿酒工艺流程</a>
+
+                </li>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89352.html' title='制曲工艺' target='_self' style=''>制曲工艺</a>
+
+                </li>
+                <li class="iFCB-PRO-1">
+                    <div class="u-date"></div>
+                    <a href='/display/89351.html' title='如何对白酒就行品评？' target='_self' style=''>如何对白酒就行品评？</a>
+
+                </li>
+
+    </ul>
+</div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10593" class=" clearfix" style="width:100%;     margin:0px auto 0px auto;padding:0px 0px 0px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-ad" >
+                    <div class="content">
+
+<div class="ibw_intro"><div style="text-align:center;">
+    <a href="/info/14715.html" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636778172016225911.jpg" alt="" /></a><a href="/info/14715.html" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636778172017163482.jpg" alt="" /></a><br />
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10589" class=" clearfix" style="width:100%;  background-color:#f0f0f0;   margin:0px auto 50px auto;padding:0px 0px 50px 0px; overflow:hidden;zoom:1">
+            
+        <div id="div_10590" class="clearfix" style="width:1200px;     margin:0px auto 50px auto;padding:50px 0px 0px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-title" >
+                        <div class="title">
+                                <span class="more">
+                                    <a href="/info/14716.html" target="_self">更多</a>
+                                </span>
+                            <div class="title_more">意见反馈_标题</div>
+                        </div>
+                    <div class="content">
+
+<div class="ibw_intro"><div class="title-wp">
+    <div class="title">
+        <h2>
+            意见反馈
+        </h2>
+    </div>
+</div>
+<p class="ms">
+    填写您的电话和E-Mail信息，将有助于我们及时与您取得联系，尽快回复您提出的问题。
+</p></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-form" >
+                    <div class="content">
+
+<form method='post' id='form' enctype='multipart/form-data'  data-ajax-begin='SetButton' data-ajax-success='submitSuccess' data-ajax-method='Post' data-ajax-failure='submitFailure' data-ajax-confirm='确定提交数据？' data-ajax='true' action='/diyform/create'><input type='hidden' value='1601' name='ID' id='ID'  data-val='true'><div class="data ">
+    <div class="title_name">您的姓名：</div>
+    <div class="input_option"><span class="isrequired" style="display:none;">*</span><input msghtml='不允许提交非法代码' name='field4717' placeholder='您的姓名：' dataType=Require allowhtml='1' msg='您的姓名： 必填 '  class='input'style='width:648px;' type='text'></div>
+</div>
+<div class="data ">
+    <div class="title_name">手机号码：</div>
+    <div class="input_option"><span class="isrequired" style="display:none;">*</span><input msghtml='不允许提交非法代码' name='field4718' placeholder='手机号码：' dataType=Mobile require=true allowhtml='1' msg='请输入正确的手机号码'  class='input'style='width:648px;' type='text'></div>
+</div>
+<div class="data ">
+    <div class="title_name">电子邮箱：</div>
+    <div class="input_option"><input msghtml='不允许提交非法代码' name='field4720' placeholder='电子邮箱：' dataType=Email require=false allowhtml='1' msg='请输入正确的Email'  class='input'style='width:648px;' type='text'></div>
+</div>
+<div class="data ">
+    <div class="title_name">您的需求：</div>
+    <div class="input_option"><textarea name='field4719' placeholder='简单描述您的需求，我们会尽快联系您' class='input'  msg='' msghtml='不允许提交非法代码' allowhtml='1' style='width:648px'></textarea><br></div>
+</div>
+<div class='btn-area'><input name='btnSubmit' value='提交' id='btnSubmit' class='btn-submit' type='submit' onclick='return Validator.Validate(this.form, 3)'><input name='reset' class='reset' value='重置' type='reset'></div></form>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="div_10582" class="iFCB-mp clearfix" style="width:100%;     margin:0px auto 0px auto;padding:50px 0px 50px 0px; overflow:hidden;zoom:1">
+                <div class="iFCB-title" >
+                    <div class="content">
+
+<div class="ibw_intro"><div class="title-wp">
+<div class="title">
+    <h2>
+        企业名片<i></i> 
+    </h2>
+</div>
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div class="iFCB-card" >
+                    <div class="content">
+
+<div class="ibw_intro"><div style="text-align:center;">
+    <a href="/info/14712.html" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/pixel.gif" class='intro-info-img' data-url="{dede:global.cfg_templets_skin/}/images/636778905622635477.jpg" alt="" /></a><br />
+</div></div>                        
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            
+            
+            <div class="clear"></div>
+        </div>
+        <div class="main_bottom"></div>
+    </div>
+        <div class="main-btm"></div>
+    </div>
+
+        <div class="ftLinkWrap">
+            <div class="ftLink clearfix">
+                <div class="ftLink-l"> 
+                    <strong>友情链接：</strong>
+                    {dede:flink titlelen='8' row='8' type='text'}
+                       
+                      [field:link /]  
+                    {/dede:flink}
+                </div> 
+            </div>
+        </div>
+
+
+ {dede:include filename="footer.htm"/}              
+    
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="sit.js"></script>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script></script>
+    <title>地址选取</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+    <link href="sit.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="sit">
+        <div class="flow">
+            <ul>
+                <li class="active">
+                    订单确定
+                    <span class="dot mdd"></span>
+                </li>
+                <li>
+                        查看订单
+                        <span class="dot"></span> 
+                </li>
+                <li>
+                        支付
+                        <span class="dot"></span>
+                </li>
+                <li>
+                        确认订单
+                        <span class="dot"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="distribution">
+            <p class="d-title">地址选配</p>
+            <ul>
+                <li v-for="(modelista,index) in filteredModelist" :class="{'active':index == modeindex }" @click="modeindex = index">
+                    <div class="message">
+                            <div class="message1">
+                                    <p>{{modelista.name}}</p>
+                                    <br />
+                                    <p>{{modelista.site}}</p>
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                            <div class="message2">
+                                    <p>{{modelista.tel}}</p>
+                                    <br  />
+                                    <p style="color:rgb(143, 58, 16); cursor: pointer;" v-if="!modelista.isdefault" v-on:click="defaulta(modelista.id)">设为默认地址</p>
+                                    <p style="color:rgb(226, 154, 118);" v-if="modelista.isdefault">默认地址</p>
+                                    <span class="glyphicon glyphicon-trash" @click="deletea(modelista.id)"></span>
+                            </div>  
+                    </div>
+                </li> 
+                <li>
+                    <div class="glyphicon glyphicon-plus plussign"></div>
+                </li>
+            </ul>
+            <div class="more" @click="moredata">更多<span>></span></div>
+        </div>
+        <div class="mode">
+            <span :class="{'ddc':indexdata == 1}" @click="indexdata = 1">
+                标准配送
+                <p>Free</p>
+            </span>
+            <span :class="{'ddc':indexdata == 2}" @click="indexdata = 2">
+                高级配送
+                <p>180</p>
+            </span>
+        </div>
+        <div class="next">
+            <p>下一步</p>
+        </div>
+    </div>
+</body>
+</html>

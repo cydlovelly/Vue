@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="cart.js"></script>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script></script>
+    <title>购物车</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="cart.css" />
+</head>
+<body>
+    <div id="app">
+        <div class="headera row">
+                <div class="left"></div>
+                <div class="ps">{{title}}</div>
+                <div class="right">
+                </div>
+        </div>
+        <div class="nav">
+            <div class="left1">
+                商品信息
+            </div>
+            <div class="right1">
+                <span>商品金额</span>
+                <span>商品数量</span>
+                <span>总金额</span>
+                <span>编辑</span>
+            </div>
+        </div>
+        <div class="con">
+            <ul>
+                <li class="con-li" v-for="item in shooplist">
+                    <div class="left2">
+                            <div class="left2-p">
+                               <span class="select" :class="{'active':item.checked}" v-on:click="selects(item)"></span>
+                            </div>
+                            <div class="left2-m">
+                                    <img :src="item.src" style="max-width:80%;"/>
+                            </div>
+                            <div class="news">
+                                <ul>
+                                    <li>{{item.name}}</li>
+                                    <li v-for="itema in item.parts">赠送：<span>{{itema.partsname}}</span></li>
+                                </ul> 
+                            </div>
+                        </div>
+                        <div class="right2">
+                            <span>{{item.price | formatMoney}}</span>
+                            <span>
+                                <div class="right2-1">
+                                     <span @click="updata(item,-1)">-</span><p v-model="item.quentity">{{item.quentity}}</p><span v-on:click="updata(item,1)">+</span>
+                                </div>
+                                <div class="right2-2">有货</div>
+                            </span>
+                            <span style="color:#f37">{{item.price*item.quentity | money('元') }}</span>
+                            <span class="glyphicon glyphicon-trash" @click="deletedata(item.id)" ></span>
+                        </div>
+                </li>
+            </ul>  
+        </div>
+        <div class="footera">
+            <div class="left3-p">
+                    <span class="select" :class="{'active':checkallflag}" @click="checkall(true)"></span>
+             </div>
+            <div class="left3">
+                <span style="color:#f37;margin: 0 20px 0 10px;" >全选</span>
+                <span @click="checkall(false)">全不选</span> 
+            </div>
+            <div class="right3">
+                <span>合计：{{totalpice | money('元')}}</span>
+                <div class="button">
+                    <a href="sit.html" style="width:100%;height:100%;color:#fff; text-decoration:none; cursor: pointer;">结账</a>
+                </div>
+            </div>       
+        </div>
+        <!-- 弹框 -->
+        <div class="alert" :class="{'md-dd':alertshade}">
+            <div class="popup">
+                <div class="close">
+                    <p class="glyphicon glyphicon-remove" @click="alertshade = true"></p>
+                </div>
+                <div class="pop-con">
+                    你确定要删除此订单信息吗？
+                </div>
+                <div class="popdown">
+                    <div class="pop-q" @click="deleteproduct">确定</div>
+                    <div class="pop-s" @click="alertshade = true">取消</div>
+                </div>
+                
+            </div>
+            <div class="shade"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

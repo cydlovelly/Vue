@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>组件</title>
+</head>
+<body>
+    <div id="app" :style="{fontSize:postFontSize + 'em'}">
+            <!-- 自定义组件
+            <btn-count></btn-count> -->
+
+            <!-- 通过 Prop 向子组件传递数据 -->
+                <!-- <deta-plass title=" me love lly"></deta-plass>
+                <deta-plass title=" my lly"></deta-plass>
+                <deta-plass title=" cyd love lly"></deta-plass> -->
+        <!-- v-bind 来动态传递 prop -->
+        <!-- <deta-plass v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title" > </deta-plass> -->
+              
+        <!-- 插槽 -->
+        <datas>阿斯大事记</datas>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+<script>
+
+// 自定义组件
+// Vue.component('btn-count',{
+//     data:function(){
+//         return {
+//             count:0
+//         }
+//     },
+//     template:'<button v-on:click="count += 1 ">点击:{{count}}</button>'
+// })
+
+
+//     var dd = new Vue({
+//         el:'#app'
+//     })
+
+// 通过 Prop 向子组件传递数据
+
+// Vue.component('deta-plass',{
+//     props:["title"],
+//     template:'<h3>{{title}}</h3>'
+// })
+// var dd = new Vue({
+//     el:'#app'
+// })
+
+
+// v-bind 来动态传递 
+// 使用事件抛出一个值
+// Vue.component('deta-plass',{
+//     props:["title"],                                    //0.1多传一个值
+//     template:'<div><h3>{{title}}</h3><button v-on:click="$emit(datafd , 0.1)">点击fd</button></div>' //button  接收 事件   $emits
+// })
+
+// new Vue({
+//     el:'#app',
+//     data:{
+//         posts:[
+//             {id:1,title:"我是ajskdja"},
+//             {id:2,title:"我是sadasdasd"},
+//             {id:3,title:"我asdaasdjkasha"}
+//         ],
+//         postFontSize:1
+//     },
+//     methods:{
+//         ondatafd:funcition(event) {
+//             this.postFontSize += event
+//         }
+//     }
+// })
+
+
+//插槽
+// Vue.component('datas',{
+//     template:'<div><b>ellor</b><slot></slot></div>' 
+// })
+
+
+//  var ddd = new Vue({
+//      el:'#app',
+//      data:{
+
+//      }
+//  })
+
+
+
+//动态组件
+
+
+</script>

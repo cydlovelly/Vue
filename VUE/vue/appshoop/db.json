@@ -1,0 +1,99 @@
+{
+        "item":[
+            {"src":"require('@/assets/banner/banner1.png')"},
+            {"src":"require('@/assets/banner/banner2.png')"},
+            {"src":"require('@/assets/banner/banner3.png')"},
+            {"src":"require('@/assets/banner/banner4.png')"}
+        ],
+        "list":[
+            {"src":"require('@/assets/guide/dindanguanli.png')","name":"订单管理"},
+            {"src":"require('@/assets/guide/dingdanjiesuan.png')","name":"订单结算"},
+            {"src":"require('@/assets/guide/fenxianghaibao.png')","name":"海报分享"},
+            {"src":"require('@/assets/guide/jifen.png')","name":"积分"},
+            {"src":"require('@/assets/guide/shanghuzhinan.png')","name":"商户指南"},
+            {"src":"require('@/assets/guide/shanghuzhongxin.png')","name":"商户中心"},
+            {"src":"require('@/assets/guide/wodeshanghu.png')","name":"我的商户"},
+            {"src":"require('@/assets/guide/yejipaiming.png')","name":"业绩排行"}
+        ],
+        "commjson":[
+            {
+                "title":"海飞丝洗发水750ml清爽去油型 控油去屑止痒洗发露男士女士正品",
+                "piece":"限量 | 前50件再减2.6元",
+                "src":"@/assets/shangpin/s1.jpg",
+                "srca":"require('@/assets/xiangqing/s1.jpg')",
+                "price":45,
+                "originalCost":54.9,
+                "yigo":10,
+                "Collagen":10,
+                "di":1
+            },
+            {
+                "title":"同色系情侣装夏装2019新款韩版百搭气质ins超火短袖班服不一样t恤",
+                "piece":"限量 | 前50件再减10元",
+                "src":"require('@/assets/shangpin/s2.jpg')",
+                "srca":"require('@/assets/xiangqing/s2.jpg')",
+                "price":65,
+                "originalCost":138.00,
+                "yigo":45,
+                "Collagen":90,
+                "id":2
+            },
+            {
+                "title":"同色系情侣装夏装裙2019新款沙滩海边度假套装短袖t恤男女连衣裙",
+                "piece":"限量 | 前50件再减15元",
+                "src":"require('@/assets/shangpin/s3.jpg')",
+                "srca":"require('@/assets/xiangqing/s3.jpg')",
+                "price":85,
+                "originalCost":119.00,
+                "yigo":56,
+                "Collagen":28,
+                "id":3
+            }
+        ],
+        "womenjson":[
+            {
+                  "title":"原创森女部落短袖t恤学生内搭夏季上衣女小清新衣服2019夏装新款",
+                  "piece":"限量 | 前50件再减30元",
+                  "src":"require('../../assets/shangpin/s4.jpg')",
+                  "srca":"require('@/assets/xiangqing/s4.jpg')",
+                  "price":69,
+                  "originalCost":138,
+                  "yigo":20,
+                  "Collagen":10,
+                  "id":4
+              },
+               {
+                  "title":"原创森女部落内搭短袖t恤衣服女宽松女装打底衫2019新款夏装上衣",
+                  "piece":"限量 | 前50件再减25元",
+                  "src":"@/assets/shangpin/s5.jpg",
+                  "srca":"require('@/assets/xiangqing/s5.jpg')",
+                  "price":69,
+                  "originalCost":138,
+                  "yigo":32,
+                  "Collagen":64,
+                  "id":5
+              },
+              {
+                  "title":"芥子记枝南子坦领半臂对襟上襦原创传统汉服女春夏装齐腰襦裙刺绣",
+                  "piece":"限量 | 前50件再减25元",
+                  "src":"@/assets/shangpin/s6.jpg",
+                  "srca":"require('@/assets/xiangqing/s6.jpg')",
+                  "price":200,
+                  "originalCost":228,
+                  "yigo":25,
+                  "Collagen":10,
+                  "id":6
+              },
+              {
+                  "title":"原创森女部落半袖t恤夏装学生打底衫可爱系短袖上衣女装2019新款",
+                  "piece":"限量 | 前50件再减10元",
+                  "src":"require('@/assets/shangpin/s7.jpg')",
+                  "srca":"require('@/assets/xiangqing/s6.jpg')",
+                  "price":59.9,
+                  "originalCost":118,
+                  "yigo":60,
+                  "Collagen":36,
+                  "id":7
+              }
+          ]
+}

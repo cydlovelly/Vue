@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div class="app">
+        <audio autoplay controls :src="consrc" v-on:ended="autoplay"></audio>
+        <ul>
+            <li v-for="(item,index) in srcc" v-on:click="play(item,index)">
+                <h1>{{item.name}}</h1>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+
+    var srcc = [
+        {src:"../乐静 - 我曾.mp3",name:"乐静 - 我曾"},
+        {src:"../王小帅 - 最近（厕所版）.mp3",name:"王小帅 - 最近"},
+        {src:"../乐静 - 我曾.mp3",name:"乐静 - 我曾"},
+        {src:"../乐静 - 我曾.mp3",name:"乐静 - 我曾"},
+    ]
+    var app = new Vue({
+        el:".app",
+        data:{
+            srcc:srcc,
+            consrc:"",
+            conindex:0
+
+        },
+        methods:{
+            //点击播放
+            play(item,index){
+                this.consrc = item.src;
+                this.conindex = index;
+            },
+            //自动播放下一个
+            autoplay(){
+                this.conindex++;
+                this.consrc = this.srcc[this.conindex].src;
+            }
+        }
+    })
+
+</script>

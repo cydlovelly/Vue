@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding:0;
+}
+/*标题*/
+.left{
+    display: inline-block;
+    width: 45%;
+    height:150px;
+    border-bottom:2px solid #888;
+}
+.ps{
+    display: inline-block;
+    width: 9%;
+    height:150px;
+    text-align: center;
+    font: 400 1.5em/260px "";
+}
+.right{
+    display: inline-block;
+    width: 45%;
+    height:150px;
+    border-bottom:2px solid #888
+}
+/*导航信息*/
+.nav{
+    width: 100%;
+    height:50px;
+    background:#555;
+    margin-top:50px;
+}
+.left1{
+    display:inline-block;
+    width:50%;
+    height:100%;
+    text-align: center;
+    color:#fff;
+    font: 400 1em/50px "";
+}
+.right1{
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+}
+.right1 span{
+    display: inline-block;
+    width:20%;
+    height:100%;
+    color:#fff;  
+    text-align: center;
+    margin: 0 10px;
+}
+/*内容部分*/
+.con{
+    width: 100%;
+    height:auto;
+}
+.con-li{
+    width:100%;
+    height:170px;
+    border-bottom:1px solid #ddd;
+}
+.left2{
+    display: inline-block;
+    width:50%;
+    height:100%;
+}
+.left2-p{
+    display: inline-block;
+    width:10%;
+    height:100%;
+    line-height: 170px;
+    text-align: center;
+}
+.select{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    border:1px solid #ccc;     
+}
+.active{
+    background:url(img/bg.png);
+    background-size: 100% 100%;
+    border:none;
+}
+.left2-m{
+    display: inline-block;
+    width:20%;
+    height:100%;
+    line-height: 170px;
+}
+
+.news{
+    float: right;
+    width:60%;
+    height:100%;
+}
+.news ul{
+    width:100%;
+    height:100%;
+    padding-top:40px;
+}
+.news li{
+    list-style: none;
+    width: 100%;
+    height:49%;
+}
+.news li span{
+    display: inline-block;
+    margin-left:20px;
+    color:#ccc;
+}
+.right2{
+    display: inline-block;
+    width:49%;
+    height:100%;
+}
+.right2 span{
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+}
+.right2-1{
+    cursor: pointer;
+}
+.right2-1 p{
+    display: inline-block;
+    width:30%;
+    height:20px;
+    background: #ddd;
+    border:1px solid #888;
+    margin: 0 10px;
+}
+.right2-2 {
+    font: 400 0.8em/1em "";
+    color:#bbb;
+}
+/*底部*/
+.footera{
+    width: 100%;
+    height:80px;
+
+}
+.left3-p{
+    display: inline-block;
+    width:5%;
+    height:100%;
+    line-height: 80px;
+    text-align: center;
+}
+.left3{
+    display: inline-block;
+    width: 50%;
+    height:100%;
+    cursor: pointer;
+    font:400 1em/80px "";
+}
+.right3{
+    width:30%;
+    height:100%;
+    float: right;
+    font:400 1em/80px "";
+}
+.right3 .button{
+    display: inline-block;
+    width:60%;
+    height:50px;
+    text-align: center;
+    color:#fff;
+    font:400 1.5em/50px "";
+    background:#f32;
+}
+/*弹框*/
+.md-dd{
+    display: none;
+}
+.popup{
+    width:45%;
+    height:200px;
+    background:#fff;
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right:0;
+    margin: auto;
+    z-index: 600;
+}
+.close{
+    width: 100%;
+    height:10%;
+}
+.close p{
+    float: right;
+    margin:5px 5px 0 0;
+}
+.pop-con{
+    width: 100%;
+    height:30%;
+    margin-top:40px;
+    text-align: center;
+    font: 400 1em/60px "";
+}
+.popdown{
+    width:100%;
+    height:50%;
+}
+.pop-q{
+    display: inline-block;
+    width:25%;
+    height:50px;
+    color:#fff;
+    margin: 0 5% 0 20%;
+    text-align: center;
+    font: 400 1.5em/50px "";
+    cursor: pointer;
+    background:rgb(228, 78, 41);
+    border:1px solid rgb(219, 164, 91);
+}
+.pop-s{
+    display: inline-block;
+    width:25%;
+    height:50px;
+    color:#fff;
+    margin-right:5%;
+    cursor: pointer;
+    text-align: center;
+    font: 400 1.5em/50px "";
+    background:rgb(228, 78, 41);
+    border:1px solid rgb(219, 164, 91);
+}
+.shade{
+    width: 100vw;
+    height:130%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+    background:rgba(44, 44, 44, 0.3);
+}

@@ -1,0 +1,282 @@
+ <div class="footer">
+                
+                <div class="ft-wrap">
+
+                    <div class="copyright">
+                        <table width="70%">
+    <tbody>
+        <tr>
+            <td align="center">
+                <p>
+                    <span>苏州科技网络酒驾有限公司</span> &nbsp; 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.ibw.cn/mianze.htm" target="_blank" rel="nofollow">免责声明</a>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=rceETN7HvN2j9dEl5OE-C-uCE1tTMvWfj7Lx_PvahQU3NZO-12bt!-2108032504" target="_blank" rel="nofollow">{dede:global.cfg_beian/}</a>&nbsp;&nbsp;
+                </p>
+                <p>
+                    地址：江苏省亳州市古井镇&nbsp;&nbsp;
+                </p>
+                <p>
+                    <span>电话：18056777108&nbsp;&nbsp; 联系人：陈总</span> 
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+                    </div>
+                </div>
+            </div>
+                        <div class="pageTop" id="pageTop"><a href="#" rel=" nofollow">[向上]</a></div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var showType='0';
+                    if(showType=='0')
+                    {
+                        $(".online-qq").floatadv();
+                    }
+                    else
+                    {
+                        $(".online-qq-lx").floatadv();
+                    }
+                    $('img#logopic').css("backgroundImage", "none");
+                    // 日期
+                    if($(".wel").length>0)
+                    {
+                        var thisis= T("今天是");
+                        var welcome=T("欢迎光临本站");
+                        var reg=new RegExp(thisis+'[\\s\\S]*'+welcome);
+                        if($(".wel").html().match(reg)||$(".wel").html().match("{默认欢迎词}"))
+                        {
+                            $.get("/Base/GetCurTime", function(data){
+                                var defaultMsg=$.format("{0}{1}，{2} ", thisis, data, welcome);
+                                $(".wel").html($(".wel").html().replace(reg,defaultMsg).replace("{默认欢迎词}",defaultMsg));
+                            })
+                        }
+                    }                    
+                });
+                jQuery.fn.floatadv = function (loaded) {
+                    var obj = this;
+                    body_height = parseInt($(window).height());
+                    block_height = parseInt(obj.height());
+
+                    top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+                    if (body_height < block_height) { top_position = 0 + $(window).scrollTop(); };
+
+                    if (!loaded) {
+                        obj.css({ 'position': 'absolute' });
+                        obj.css({ 'top': top_position });
+                        $(window).bind('resize', function () {
+                            obj.floatadv(!loaded);
+                        });
+                        $(window).bind('scroll', function () {
+                            obj.floatadv(!loaded);
+                        });
+                    } else {
+                        obj.stop();
+                        obj.css({ 'position': 'absolute' });
+                        obj.animate({ 'top': top_position }, 400, 'linear');
+                    }
+                }
+                //控制banner显示位置
+                var place= '2';
+                if (place==0)//不显示
+                {
+                    $("#banner").remove();
+                }
+                var place2= '0';
+                var navlayout='0';
+               // alert("place1:"+place+";place2:"+place2);
+                if(place!=0&&navlayout<=1)
+                {
+                    if (place == 2&&place2 == 0)//在banner上方
+                    {
+                        $("#HOT").before($("#banner"));
+                        $("#banner").before($("#topNav"));
+                    }
+                    else if (place == 2&&place2 == 1)
+                    { 
+                        $("#banner").before($("#topNav"));
+                        $("#banner").before($("#HOT"));
+                    }
+                    else if(place == 1&&place2 == 0)
+                    {
+                        $("#topNav").before($("#banner"));
+                        $("#HOT").before($("#topNav"));
+                    }
+                    else if(place == 1&&place2 == 1)
+                    {
+                        $("#topNav").before($("#banner"));
+                        $("#banner").before($("#HOT"));
+                    }
+                }
+                if(place!=0&&navlayout>1)
+                {
+                    if (place2 == 0)//在banner上方
+                    {
+                        $("#HOT").before($("#banner"));
+                    }
+                    else if (place2 == 1)
+                    { 
+                       
+                        $("#banner").before($("#HOT"));
+                    }
+                }
+                function hiddSub(sender)
+                {
+                    $('#'+sender).removeClass();
+                    $('#' + sender).addClass('sub');
+                }
+                function showSub(sender) {
+                    $('#' + sender).removeClass();
+                    $('#' + sender).addClass('sub2');
+                }
+                function closeQQ(sender) {
+                    $('.online-qq').css("display", "none");
+                }
+                //自动关闭提示框
+                function showtip(str) {
+                    var msgw, msgh, bordercolor;
+                    msgw = 350;//提示窗口的宽度
+                    msgh = 80;//提示窗口的高度
+                    bordercolor = "#336699";//提示窗口的边框颜色
+                    //创建提示窗口的div
+                    var msgObj = document.createElement("div")
+                    msgObj.setAttribute("id", "alertmsgDiv");
+                    msgObj.setAttribute("align", "center");
+                    msgObj.style.background = "white";
+                    msgObj.style.border = "1px solid " + bordercolor;
+                    msgObj.style.position = "absolute";
+                    msgObj.style.left = "50%";
+                    msgObj.style.font = "12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    //窗口距离左侧和顶端的距离
+                    msgObj.style.marginLeft = "-225px";
+                    //窗口被卷去的高+（屏幕可用工作区高/2）-150
+                    var scrollTop = window.pageYOffset  //用于FF
+                            || document.documentElement.scrollTop
+                            || document.body.scrollTop
+                            || 0;
+                    msgObj.style.top = scrollTop + (window.screen.availHeight / 2) - 150 + "px";
+                    msgObj.style.width = msgw + "px";
+                    msgObj.style.height = msgh + "px";
+                    msgObj.style.textAlign = "center";
+                    msgObj.style.lineHeight = "25px";
+                    msgObj.style.zIndex = "10001";
+                    document.body.appendChild(msgObj);
+                    //提示信息标题
+                    var title = document.createElement("h4");
+                    title.setAttribute("id", "alertmsgTitle");
+                    title.setAttribute("align", "left");
+                    title.style.margin = "0";
+                    title.style.padding = "3px";
+                    title.style.background = bordercolor;
+                    title.style.filter = "progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+                    title.style.opacity = "0.75";
+                    title.style.border = "1px solid " + bordercolor;
+                    title.style.height = "18px";
+                    title.style.font = "12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    title.style.color = "white";
+                    title.innerHTML = "提示信息";
+                    document.getElementById("alertmsgDiv").appendChild(title);
+                    //提示信息
+                    var txt = document.createElement("p");
+                    txt.setAttribute("id", "msgTxt");
+                    txt.style.margin = "16px 0";
+                    txt.innerHTML = str;
+                    document.getElementById("alertmsgDiv").appendChild(txt);
+                    //设置关闭时间
+                    window.setTimeout("closetip()", 3000);
+                }
+
+                function closetip() {
+                    document.getElementById("alertmsgDiv").removeChild(document.getElementById("alertmsgTitle"));
+                    document.body.removeChild(document.getElementById("alertmsgDiv"));
+                }
+            </script>
+            
+    <script type="text/javascript">
+        var submitSuccess = function (d) { if (d) { var success = "提交成功"; showtip(success); document.location.reload(); } else { var fail = "提交失败"; alert(fail); }; };
+        var submitFailure = function (xhr, status) { alert("失败!\r\n=================================\r\n" + xhr.responseText) };
+        function SetButton() {$("#btnSubmit").attr({ "disabled": "disabled" });}
+    </script>
+
+
+            <script>
+
+$(function(){
+    if ($(".pg_margins").find(".adver").is(":visible") === true) {
+        $(".footer").css({
+            "padding-bottom": "140px"
+        });
+    } else {
+        $(".footer").css({
+            "padding-bottom": "30px"
+        });
+    };
+    $(".adver_close").click(function(){
+        $(".footer").css({"padding-bottom":30})
+    })
+
+    jQuery(".inner3 .m-item .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+    jQuery(".inner4 .m-item .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+    jQuery(".inner #leftObj .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+
+    var DESIGN_LIST = $(".DESIGN_LIST")
+    var DESIGN_LIST_ul = DESIGN_LIST.find("ul")
+    var DESIGN_LIST_li = DESIGN_LIST_ul.find("li")
+    DESIGN_LIST.slide({
+        titCell: ".hd ul li", mainCell: ".bd ul", effect: "fade", autoPlay: true, vis: 1, autoPage: false, trigger: "click", pnLoop: true, startFun: function (i) {
+            var nid = $(".iFCB-S-DESIGN").attr("id");
+            var hw = $(".DESIGN_LIST .hd").width();
+            DESIGN_LIST_li.css({"width":hw/nid,"height":hw/nid-2});
+            var left = (parseInt(i/nid) * hw) * -1;
+            $(".DESIGN_LIST_WRAP").animate({ left: left + "px" });
+
+            var data_img = DESIGN_LIST_li.eq(i).attr("data-img"),
+                data_url = DESIGN_LIST_li.eq(i).attr("data-url"),
+                data_des = DESIGN_LIST_li.eq(i).attr("data-des"),
+                data_title = DESIGN_LIST_li.eq(i).attr("data-title");
+            $(".iFCB-B-DESIGN .m-pic img").attr({"src": data_img});
+            $(".iFCB-B-DESIGN .u-tt a").html(data_title);
+            $(".iFCB-B-DESIGN .u-des span").html(data_des);
+            $(".iFCB-B-DESIGN .u-tt a,.iFCB-B-DESIGN .u-des a").attr({"href": data_url});
+        }
+    });
+    jQuery(".iFCB-FOCUS").slide({titCell:".hd ul",mainCell:".bd ul",effect:"leftLoop",autoPlay:true,autoPage:true});
+    
+    $("#pageTop ").on("click",
+    function (A) {
+        A.preventDefault();
+        $("body,html").animate({
+            scrollTop: 0
+        },
+        300)
+    })
+    $(".bj i").click(function(){
+        $(".iFCB-bj,.bj").css({"width":40});
+        $(".bj .content+.clear").show("100");
+        $(".bj .content+.clear").css({right:0});
+    })  
+    $(".bj .content+.clear").click(function() {
+        $(".iFCB-bj,.bj").css({"width":100+"%"});
+        $(this).css({right:-40});
+        $(this).hide();
+    });
+})
+
+</script>
+
+
+
+        </div>
+   
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c479576bef71294701a517eb4b33e2ef";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <script>
+    $(".intro-info-img").scrollLoading();
+    $(".b-pic").scrollLoading();
+    </script>

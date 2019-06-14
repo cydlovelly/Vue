@@ -1,0 +1,975 @@
+
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <meta name="description" content="{dede:field name='keywords'/}" />
+    <link href="/templets/mobana/css/css_structure.css" rel="stylesheet" />
+    <link href="/templets/mobana/css/css.css" rel="stylesheet" />
+    <script src="/templets/mobana/js/jqwithval.js"></script>
+    <script src="/templets/mobana/js/1.js" type="text/javascript"></script>
+    <script src="/templets/mobana/js/ssss.js"></script>
+
+    <script src="/templets/mobana/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/templets/mobana/js/kxbdMarquee.js"></script>
+    <script src="/templets/mobana/js/jquery.kxbdsupermarquee.js"></script>
+    <script src="/templets/mobana/js/adver.js"></script>
+    <script src="/templets/mobana/js/purl.min.js"></script>
+    <script src="/templets/mobana/js/jquery.scrollLoading-min.js"></script>
+    <script type="text/javascript" charset="utf-8"></script>
+    <script language="javascript" src="/templets/mobana/js/common.js?rightButton=0"></script>
+    <script src="/templets/mobana/js/jquery.colorbox-min.js"></script>
+    
+    <link rel="stylesheet" href="/templets/mobana/css/animate.min.css">
+    <script type="text/javascript" src="/templets/mobana/js/validate.js"></script>
+    <script src="/templets/mobana/js/wow.min.js"></script>
+    
+    <style type="text/css">
+        .picList {
+            float: left;
+            text-align: center;
+        }
+
+        .title_more a {
+            color: #FFF;
+        }
+
+        .error {
+            padding-left: 5px;
+            color: #f60;
+        }
+
+        img {
+            background: none;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+        .pro_sort .third_box{display:none}
+        .pro_sort .active .third_box{display:block}
+    </style>
+
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+      //增加导航固定模式，使导航跟随滚动条滚动
+        jQuery(window).scroll(function(){
+        var sTop=jQuery(document).scrollTop();
+        if(sTop>=42){
+          $("#topNav").addClass("nav_fixed");
+        }
+        else{
+          $("#topNav").removeClass("nav_fixed");
+        }
+    });
+    
+    });
+</script>
+    <!--[if IE 6]>
+    <script src="/Scripts/DD_belatedPNG_0.0.8a.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix("*");</script>
+    <![endif]-->
+    <style>
+    .touch-btn {
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
+
+    .touch-box {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        z-index: 600;
+        color: #777;
+        display: none;
+    }
+
+    .touch-btn:hover .touch-box {
+        display: block;
+    }
+
+    .touch-box .arrow {
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        display: block;
+        height: 0;
+        position: absolute;
+        right: 46px;
+        top: -6px;
+    }
+
+    .touch-box .wrap {
+        padding: 20px 0; /*width:280px;*/
+        background: #fff;
+        border-radius: 2px;
+        border: 1px solid #eee;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .touch-box .wrap .ms {
+            padding: 0 0 15px;
+        }
+
+        .touch-box .wrap .wenben {
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        .touch-box .wrap h1 {
+            font-size: 16px;
+            margin: 0;
+            color: #111;
+        }
+
+        .touch-box .wrap .code img {
+            width: 120px;
+            height: 120px;
+        }
+        /**.touch-box .wrap .code li{width:50%;float:left}*/
+        .touch-box .wrap table {
+            width: 100%;
+        }
+
+            .touch-box .wrap table td {
+                padding: 0 15px;
+                border-right: 1px solid #ddd;
+            }
+
+                .touch-box .wrap table td:last-child {
+                    border-right: 0;
+                }
+</style>
+<style type="text/css">
+        .vrlogo {
+            float: left;
+            margin: 20px 0;
+         }
+
+            .vrlogo img {
+                float: left;
+                margin-right: 20px;
+            }
+
+            .vrlogo h3 {
+                float: left;
+                color: #4c4c4c;
+                font-size: 40px;
+                line-height: 66px;
+            }
+
+        .sTel {
+            float: right;
+            margin: 20px 0;
+        }
+
+            .sTel p {
+                color: #4c4c4c;
+                font-size: 14px;
+            }
+
+            .sTel em {
+                display: block;
+                color: #cda84a;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: bold;
+            }
+
+        .header.vr {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="pg_margins pg_inside">
+        <div id="tips"></div>
+            <div class="topArea">
+                <div class="bg-topArea">
+                    <p class="wel">
+<p>
+  今天是2019年3月16日 星期六，欢迎光临本站&nbsp;
+</p>                    </p>
+                    <ul class="r-arte">                       
+                        <li class="sCommon">
+                                <span></span><a href="javascript:;" class="favorite" rel="nofollow" onclick="setHome(this,window.location);addFavorite(document.location.href, document.title);">收藏本站</a><a class="top_map" href="/sitemap.html">网站地图</a>
+                                    <div class=" touch-btn">
+                                     <a target="_blank" rel="nofollow" class="top_mobile"href="http://www.huicaigongjiu.com/mobileqr.html">触屏版</a>                          
+                                        <div id="mobileQr" class="touch-box">
+                                            <div class="wrap">
+                                                
+<table class="mytable">
+    <tbody>
+        <tr>
+            <td>
+                <ul class="code msite">
+                    <li>
+                        <div class="img"> <img width="150" height="150" alt="浏览手机站" src="http://ibwewm.z243.ibw.cc/api/QR?t=http://m.huicaigongjiu.com&amp;q=2&amp;s=3&amp;e=3"> </div>
+                        <div class="text"><a href="http://m.huicaigongjiu.com">浏览手机站</a></div>
+                    </li>
+                </ul>
+            </td>
+            
+                    </tr>
+    </tbody>
+</table>
+
+                                            </div>
+                                        </div> 
+                                    </div>
+                      </li>
+                    </ul>
+                </div>
+             
+            </div>
+                    <div class="header">
+                <div class="header-inner clearfix">
+                    <div class="logo ">
+                        <a href="/" title="亳州市唐坊酒业有限公司">
+                            <img src="/u/916f0135-608d-416b-9f48-6af13259d91f/image/636820519158893530.jpg" alt="亳州市唐坊酒业有限公司" id="logopic" />
+                        </a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    <div class="navbox" id="topNav">
+                <div class="nav" style="margin:0 auto;">
+                    <ul>
+
+        <li class="nav0" style="width:169px;" >
+            <a href="/"    >网站首页</a>
+        </li>
+            <li class="line"></li>
+        <li class="nav1" style="width:169px;" onmouseover="showMenu(4364);" onmouseout="hiddMenu(4364);">
+            <a href="/info/14702.html"  id="menuA4364"  >产品中心</a>
+                <div class="shownav" id="menu4364">
+                        <a href="/info/14710.html" >徽财贡酒</a>
+                        <a href="/info/14703.html" >定制酒</a>
+                        <a href="/info/21221.html" >唐坊酒</a>
+                        <a href="/info/21486.html" >古家美酒</a>
+                        <a href="/info/20773.html" >坛子酒</a>
+                        <a href="/info/21520.html" >人参酒</a>
+                </div>
+        </li>
+            <li class="line"></li>
+        <li class="nav2" style="width:169px;" >
+            <a href="/info/14715.html"    >合作案例</a>
+        </li>
+            <li class="line"></li>
+        <li class="nav3" style="width:169px;" >
+            <a href="/info/14717.html"    >关于我们</a>
+        </li>
+            <li class="line"></li>
+        <li class="nav4" style="width:169px;" onmouseover="showMenu(4365);" onmouseout="hiddMenu(4365);">
+            <a href="/info/14719.html"  id="menuA4365"  >企业商讯</a>
+                <div class="shownav" id="menu4365">
+                        <a href="/info/14720.html" >常见问题</a>
+                        <a href="/info/14721.html" >行业资讯</a>
+                </div>
+        </li>
+            <li class="line"></li>
+        <li class="nav5" style="width:169px;" onmouseover="showMenu(4367);" onmouseout="hiddMenu(4367);">
+            <a href="/info/14712.html"  id="menuA4367"  >联系我们</a>
+                <div class="shownav" id="menu4367">
+                        <a href="/info/14713.html" >联系我们</a>
+                </div>
+        </li>
+            <li class="line"></li>
+        <li class="nav6" style="width:174px;" >
+            <a href="/diyform/1601.html"    >在线留言</a>
+        </li>
+<script type="text/javascript">
+    var isOn = false;
+    var navList = $('.nav>ul>li>a') || [];
+    for (var i = 0; i < navList.length; i++)
+    {
+        if (navList[i].pathname == location.pathname) {
+            $(navList[i]).addClass("current");
+            isOn = true;
+            break;
+        }
+    }
+    if (!isOn) {
+        eval('var menuStates = ["/info/14702.html"] || []');
+        for (var i = 0; i < navList.length; i++) {
+            if (navList[i].pathname == menuStates[menuStates.length-1]) {
+                $(navList[i]).addClass("current");
+                isOn = true;
+                break;
+            }
+        }
+        if (!isOn)
+        {
+            for (var i = 0; i < navList.length; i++) {
+                if ($.inArray(navList[i].pathname, menuStates) > -1) {
+                    $(navList[i]).addClass("current");
+                    isOn = true;
+                    break;
+                }
+            }
+        }
+    }
+</script>
+                    </ul>
+                </div>
+            </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //增加导航固定模式，使导航跟随滚动条滚动
+                        jQuery(window).scroll(function(){
+                            var sTop=jQuery(document).scrollTop();
+                            if(sTop>=42){
+                                $("#topNav").addClass("nav_fixed");
+                                $(".HOT-KEYS").addClass("HOT-KEYS-ADD");
+                            }
+                            else{
+                                $("#topNav").removeClass("nav_fixed");
+                                $(".HOT-KEYS").removeClass("HOT-KEYS-ADD");
+                            }
+                        });
+
+                    });
+                </script>
+                    <div class="HOT-KEYS" id="HOT">
+                <div class="searchformBox">
+                    <form method="get" action="/search.html" name="searchForm">
+                        <input class="serach_input" maxlength="30" size="30" placeholder=请输入搜索关键词！
+                               name="searchKeyword" type="text" />
+                        <input class="btn_serach" value="" type="submit" />
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+                    <div class='banner' id="banner">
+                <span class='left-shadow'></span><span class='right-shadow'></span><div>
+                    <script language='javascript'>bannerShow(7, 1920, 400, "5000", '1542')</script>
+
+                </div><div class='blank-area'></div>
+            </div>
+        
+
+    <div id="mainhome" class="main-home inner">
+        <div class="main-top"></div>
+        <div class="main mainbg ">
+            <div class="location">
+                <span class="ico">
+                    <a href="/" title="首页">首页</a>
+                        <span>&gt;</span>
+                        <a href="/info/14702.html" id="14702">产品中心</a>
+                </span>
+            </div>
+                <div id="leftObj" class="left">
+                        <div class="shadow"></div>
+                        <div class="pro_sort_box">
+                            <input id="CurrentCategoryID" name="CurrentCategoryID" type="hidden" value="14702" />
+                            <div class="title">
+                                <div class="title_more">
+                                    <a href="/info/14702.html" id="14702">产品中心</a>
+                                </div>
+                            </div>
+                            <div id="div_14702">
+                                <div class="pro_sort">
+                                    <div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/14710.html" id="14710">&nbsp;&nbsp;&nbsp;&nbsp;徽财贡酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/14703.html" id="14703">&nbsp;&nbsp;&nbsp;&nbsp;定制酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/21221.html" id="21221">&nbsp;&nbsp;&nbsp;&nbsp;唐坊酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/21486.html" id="21486">&nbsp;&nbsp;&nbsp;&nbsp;古家美酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/20773.html" id="20773">&nbsp;&nbsp;&nbsp;&nbsp;坛子酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="each_li active ">
+                                                <div class="name">
+                                                    <div class="icon">
+                                                        <a href="/info/21520.html" id="21520">&nbsp;&nbsp;&nbsp;&nbsp;人参酒</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="promore"><a href='/info/14702.html'>更多分类</a></div>
+                                </div>
+                                <script type="text/javascript">
+                                    var each_li = $('#div_14702 .pro_sort .each_li');
+                                    for (var i = 0; i < each_li.length; i++) {
+                                        var li = each_li[i];
+                                        var length = li.children.length;
+                                        if (length > 1) {
+                                            li.title = "";
+                                        }
+                                        else {
+                                            var li_name = li.children[0].children[0];
+                                            li_name.className = "";
+
+                                            if (li.className.indexOf("current") > 0) {
+
+                                                li.className = "each_li current";
+                                            }
+                                            else {
+                                                li.className = "each_li ";
+                                            }
+                                            var href = li_name.children[0].href;
+                                            li.title = href;
+                                        }
+                                    }
+                                    $('#div_14702 .pro_sort .each_li .third_box').click(function (event) {
+                                        event.stopPropagation();
+                                    });
+                                    $('#div_14702 .pro_sort .each_li').click(function () {
+                                        var title = $(this).prop("title")
+                                        if (title == "") {
+                                            $(this).toggleClass('active');
+                                        }
+                                        else {
+                                            location.href = title;
+                                        }
+
+                                    });
+                                </script>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+    <div id="ct14720_divLeftModule">
+        <div class="iFCB-inside-title iFCB-inside-news">
+                <div class="title">
+                        <span class="more">
+                            <a href="/info/14720.html" target="_self">更多</a>
+                        </span>
+                    <div class="title_more">企业商讯</div>
+                </div>
+            <div class="content">
+                <div class="TTXW_LIST">
+  <ul>
+      <li class="iFCB-PRO-1">
+        <div class="u-date"></div>
+        <a href='/display/89358.html' title='为什么送礼大多数会选择白酒呢？' target='_self' style=''>为什么送礼大多数会选择白酒呢？</a>
+
+      </li>
+      <li class="iFCB-PRO-1">
+        <div class="u-date"></div>
+        <a href='/display/89357.html' title='白酒的贮藏该如何选择？' target='_self' style=''>白酒的贮藏该如何选择？</a>
+
+      </li>
+      <li class="iFCB-PRO-1">
+        <div class="u-date"></div>
+        <a href='/display/89356.html' title='如何做到喝酒不伤身？' target='_self' style=''>如何做到喝酒不伤身？</a>
+
+      </li>
+
+  </ul>
+</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="ct14714_divLeftModule">
+        <div class="iFCB-inside-title iFCB-inside-design">
+                <div class="title">
+                        <span class="more">
+                            <a href="/info/14714.html" target="_self">更多</a>
+                        </span>
+                    <div class="title_more">合作案例</div>
+                </div>
+            <div class="content">
+                <div class="iFCB-pro">
+  <div class="bd">
+    <ul class="iFCB-TPLB clearfix">
+            <li class="iFCB-PRO-5 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/89268.html' title='河北某超市' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636778877362381538_small.jpg' src="/content/pixel.gif" alt='河北某超市' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/89268.html' title='河北某超市' target='_self' style=''>河北某超市</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-5 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/89267.html' title='山西某代理商' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636778877361287485_small.jpg' src="/content/pixel.gif" alt='山西某代理商' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/89267.html' title='山西某代理商' target='_self' style=''>山西某代理商</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-5 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/89266.html' title='山东某代理商' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636778877359881317_small.jpg' src="/content/pixel.gif" alt='山东某代理商' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/89266.html' title='山东某代理商' target='_self' style=''>山东某代理商</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-5 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/89265.html' title='河北某代理商' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636778877358787222_small.jpg' src="/content/pixel.gif" alt='河北某代理商' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/89265.html' title='河北某代理商' target='_self' style=''>河北某代理商</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-5 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/89264.html' title='河南某代理商' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636778877357068608_small.jpg' src="/content/pixel.gif" alt='河南某代理商' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/89264.html' title='河南某代理商' target='_self' style=''>河南某代理商</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+
+    </ul>
+  </div>
+</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="ct14713_divLeftModule">
+        <div class="iFCB-inside-contact">
+            <div class="content">
+                <div class="ibw_intro"><a href="/info/14712.html" target="_blank"><img src="/Content/pixel.gif" class='intro-info-img' data-url="/u/916f0135-608d-416b-9f48-6af13259d91f/image/636779781526156852.jpg" alt="" /></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+                                                            <div class="col_bottom"></div>
+                </div>
+            
+
+    <div id="rightObj" class="right">
+        <h2 class="title"><b><span id="lblCurrentName">产品中心</span></b></h2>
+                <div class="iFCB-pro">
+  <div class="bd">
+    <ul class="iFCB-TPLB clearfix">
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/95420.html' title='唐坊（来一坛）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636783029510497115_small.jpg' src="/content/pixel.gif" alt='唐坊（来一坛）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/95420.html' title='唐坊（来一坛）' target='_self' style=''>唐坊（来一坛）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/95419.html' title='唐坊（5年陈酿）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636783029509247025_small.jpg' src="/content/pixel.gif" alt='唐坊（5年陈酿）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/95419.html' title='唐坊（5年陈酿）' target='_self' style=''>唐坊（5年陈酿）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/95418.html' title='唐坊（唐坊窖30年）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636783029507215603_small.jpg' src="/content/pixel.gif" alt='唐坊（唐坊窖30年）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/95418.html' title='唐坊（唐坊窖30年）' target='_self' style=''>唐坊（唐坊窖30年）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/94162.html' title='唐坊20' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636782371819247179_small.jpg' src="/content/pixel.gif" alt='唐坊20' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/94162.html' title='唐坊20' target='_self' style=''>唐坊20</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/94161.html' title='唐坊10' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636782371817684554_small.jpg' src="/content/pixel.gif" alt='唐坊10' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/94161.html' title='唐坊10' target='_self' style=''>唐坊10</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/95377.html' title='徽财贡酒（接待专用）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636783014335348859_small.jpg' src="/content/pixel.gif" alt='徽财贡酒（接待专用）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/95377.html' title='徽财贡酒（接待专用）' target='_self' style=''>徽财贡酒（接待专用）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/94160.html' title='唐坊30' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636782371815652867_small.jpg' src="/content/pixel.gif" alt='唐坊30' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/94160.html' title='唐坊30' target='_self' style=''>唐坊30</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/94159.html' title='唐坊（典藏）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636782371813777745_small.jpg' src="/content/pixel.gif" alt='唐坊（典藏）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/94159.html' title='唐坊（典藏）' target='_self' style=''>唐坊（典藏）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+            <li class="iFCB-PRO-3 clearfix">
+              <div class="iFCB-rp">
+                <div class="m-pic"><a href='/display/94137.html' title='徽财贡酒(吉祥）' target="_self"><img data-url='/u/916f0135-608d-416b-9f48-6af13259d91f/image/636782371076496667_small.jpg' src="/content/pixel.gif" alt='徽财贡酒(吉祥）' class="intro-info-img " height='250' width='250'></a></div>
+                <dl>
+                  <dt class="u-tt"><a href='/display/94137.html' title='徽财贡酒(吉祥）' target='_self' style=''>徽财贡酒(吉祥）</a>
+      </dt>
+                </dl>
+              </div>
+            </li>
+
+    </ul>
+  </div>
+</div>
+                    <div class="paging">
+                <div>
+                    <div class="pagernumber" data-maxpages="10" data-mvcpager="true" data-pageparameter="page" data-urlformat="/info/index/14702?page=__page__"><a disabled="disabled" class="disabled">上一页</a>  <span class="current">1</span>  <a href="/info/index/14702?page=2">2</a>  <a href="/info/index/14702?page=3">3</a>  <a href="/info/index/14702?page=4">4</a>  <a href="/info/index/14702?page=5">5</a>  <a href="/info/index/14702?page=6">6</a>  <a href="/info/index/14702?page=7">7</a>  <a href="/info/index/14702?page=8">8</a>  <a href="/info/index/14702?page=9">9</a>  <a href="/info/index/14702?page=10">10</a>  <a href="/info/index/14702?page=2">下一页</a>  <select data-pageindexbox="true" data-autosubmit="true"><option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div>
+                </div>
+            </div>
+            <script type="text/javascript" src="/Scripts/pagerformat.js"></script>
+            </div>
+
+
+            <div class="main_bottom"></div>
+        </div>
+        <div class="main-btm"></div>
+    </div>
+
+
+
+                    <div class="footer">
+                
+                <div class="ft-wrap">
+
+                    <div class="copyright">
+                        <table width="70%">
+  <tbody>
+    <tr>
+      <td align="center">
+        <p>
+          <span>亳州市唐坊酒业有限公司</span> &nbsp; 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.ibw.cn/mianze.htm" target="_blank" rel="nofollow">免责声明</a>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">皖ICP备13018543号-2 </a>&nbsp;&nbsp;
+        </p>
+        <p>
+          地址：安徽省亳州市古井镇&nbsp;&nbsp;
+        </p>
+        <p>
+          <span>电话：18056777108&nbsp;&nbsp; 联系人：李总</span> 
+        </p>
+        <p>
+          <a href="http://www.ibw.cn" target="_blank">技术支持</a>：<a href="http://www.ibw.cn" target="_blank">网新科技</a>(<a href="http://www.ibw.cn" target="_blank">www.ibw.cn</a>)
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+            </div>
+                        <div class="pageTop" id="pageTop"><a href="#" rel=" nofollow">[向上]</a></div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var showType='0';
+                    if(showType=='0')
+                    {
+                        $(".online-qq").floatadv();
+                    }
+                    else
+                    {
+                        $(".online-qq-lx").floatadv();
+                    }
+                    $('img#logopic').css("backgroundImage", "none");
+                    // 日期
+                    if($(".wel").length>0)
+                    {
+                        var thisis= T("今天是");
+                        var welcome=T("欢迎光临本站");
+                        var reg=new RegExp(thisis+'[\\s\\S]*'+welcome);
+                        if($(".wel").html().match(reg)||$(".wel").html().match("{默认欢迎词}"))
+                        {
+                            $.get("/Base/GetCurTime", function(data){
+                                var defaultMsg=$.format("{0}{1}，{2} ", thisis, data, welcome);
+                                $(".wel").html($(".wel").html().replace(reg,defaultMsg).replace("{默认欢迎词}",defaultMsg));
+                            })
+                        }
+                    }                    
+                });
+                jQuery.fn.floatadv = function (loaded) {
+                    var obj = this;
+                    body_height = parseInt($(window).height());
+                    block_height = parseInt(obj.height());
+
+                    top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+                    if (body_height < block_height) { top_position = 0 + $(window).scrollTop(); };
+
+                    if (!loaded) {
+                        obj.css({ 'position': 'absolute' });
+                        obj.css({ 'top': top_position });
+                        $(window).bind('resize', function () {
+                            obj.floatadv(!loaded);
+                        });
+                        $(window).bind('scroll', function () {
+                            obj.floatadv(!loaded);
+                        });
+                    } else {
+                        obj.stop();
+                        obj.css({ 'position': 'absolute' });
+                        obj.animate({ 'top': top_position }, 400, 'linear');
+                    }
+                }
+                //控制banner显示位置
+                var place= '2';
+                if (place==0)//不显示
+                {
+                    $("#banner").remove();
+                }
+                var place2= '0';
+                var navlayout='0';
+               // alert("place1:"+place+";place2:"+place2);
+                if(place!=0&&navlayout<=1)
+                {
+                    if (place == 2&&place2 == 0)//在banner上方
+                    {
+                        $("#HOT").before($("#banner"));
+                        $("#banner").before($("#topNav"));
+                    }
+                    else if (place == 2&&place2 == 1)
+                    { 
+                        $("#banner").before($("#topNav"));
+                        $("#banner").before($("#HOT"));
+                    }
+                    else if(place == 1&&place2 == 0)
+                    {
+                        $("#topNav").before($("#banner"));
+                        $("#HOT").before($("#topNav"));
+                    }
+                    else if(place == 1&&place2 == 1)
+                    {
+                        $("#topNav").before($("#banner"));
+                        $("#banner").before($("#HOT"));
+                    }
+                }
+                if(place!=0&&navlayout>1)
+                {
+                    if (place2 == 0)//在banner上方
+                    {
+                        $("#HOT").before($("#banner"));
+                    }
+                    else if (place2 == 1)
+                    { 
+                       
+                        $("#banner").before($("#HOT"));
+                    }
+                }
+                function hiddSub(sender)
+                {
+                    $('#'+sender).removeClass();
+                    $('#' + sender).addClass('sub');
+                }
+                function showSub(sender) {
+                    $('#' + sender).removeClass();
+                    $('#' + sender).addClass('sub2');
+                }
+                function closeQQ(sender) {
+                    $('.online-qq').css("display", "none");
+                }
+                //自动关闭提示框
+                function showtip(str) {
+                    var msgw, msgh, bordercolor;
+                    msgw = 350;//提示窗口的宽度
+                    msgh = 80;//提示窗口的高度
+                    bordercolor = "#336699";//提示窗口的边框颜色
+                    //创建提示窗口的div
+                    var msgObj = document.createElement("div")
+                    msgObj.setAttribute("id", "alertmsgDiv");
+                    msgObj.setAttribute("align", "center");
+                    msgObj.style.background = "white";
+                    msgObj.style.border = "1px solid " + bordercolor;
+                    msgObj.style.position = "absolute";
+                    msgObj.style.left = "50%";
+                    msgObj.style.font = "12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    //窗口距离左侧和顶端的距离
+                    msgObj.style.marginLeft = "-225px";
+                    //窗口被卷去的高+（屏幕可用工作区高/2）-150
+                    var scrollTop = window.pageYOffset  //用于FF
+                            || document.documentElement.scrollTop
+                            || document.body.scrollTop
+                            || 0;
+                    msgObj.style.top = scrollTop + (window.screen.availHeight / 2) - 150 + "px";
+                    msgObj.style.width = msgw + "px";
+                    msgObj.style.height = msgh + "px";
+                    msgObj.style.textAlign = "center";
+                    msgObj.style.lineHeight = "25px";
+                    msgObj.style.zIndex = "10001";
+                    document.body.appendChild(msgObj);
+                    //提示信息标题
+                    var title = document.createElement("h4");
+                    title.setAttribute("id", "alertmsgTitle");
+                    title.setAttribute("align", "left");
+                    title.style.margin = "0";
+                    title.style.padding = "3px";
+                    title.style.background = bordercolor;
+                    title.style.filter = "progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+                    title.style.opacity = "0.75";
+                    title.style.border = "1px solid " + bordercolor;
+                    title.style.height = "18px";
+                    title.style.font = "12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    title.style.color = "white";
+                    title.innerHTML = "提示信息";
+                    document.getElementById("alertmsgDiv").appendChild(title);
+                    //提示信息
+                    var txt = document.createElement("p");
+                    txt.setAttribute("id", "msgTxt");
+                    txt.style.margin = "16px 0";
+                    txt.innerHTML = str;
+                    document.getElementById("alertmsgDiv").appendChild(txt);
+                    //设置关闭时间
+                    window.setTimeout("closetip()", 3000);
+                }
+
+                function closetip() {
+                    document.getElementById("alertmsgDiv").removeChild(document.getElementById("alertmsgTitle"));
+                    document.body.removeChild(document.getElementById("alertmsgDiv"));
+                }
+            </script>
+            
+    <script type="text/javascript">
+        
+        $(function () {
+            $('.menu a').each(function () {
+                if ($(this).attr('id') == $('#CurrentCategoryID').val()) {
+                    $(this).addClass('current');
+                }
+            });
+        });
+    </script>
+
+
+            <script>
+
+$(function(){
+  if ($(".pg_margins").find(".adver").is(":visible") === true) {
+    $(".footer").css({
+      "padding-bottom": "140px"
+    });
+  } else {
+    $(".footer").css({
+      "padding-bottom": "30px"
+    });
+  };
+  $(".adver_close").click(function(){
+    $(".footer").css({"padding-bottom":30})
+  })
+
+  jQuery(".inner3 .m-item .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+  jQuery(".inner4 .m-item .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+  jQuery(".inner #leftObj .iFCB-pro").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50,trigger:"click"});
+
+  var DESIGN_LIST = $(".DESIGN_LIST")
+  var DESIGN_LIST_ul = DESIGN_LIST.find("ul")
+  var DESIGN_LIST_li = DESIGN_LIST_ul.find("li")
+  DESIGN_LIST.slide({
+    titCell: ".hd ul li", mainCell: ".bd ul", effect: "fade", autoPlay: true, vis: 1, autoPage: false, trigger: "click", pnLoop: true, startFun: function (i) {
+      var nid = $(".iFCB-S-DESIGN").attr("id");
+      var hw = $(".DESIGN_LIST .hd").width();
+      DESIGN_LIST_li.css({"width":hw/nid,"height":hw/nid-2});
+      var left = (parseInt(i/nid) * hw) * -1;
+      $(".DESIGN_LIST_WRAP").animate({ left: left + "px" });
+
+      var data_img = DESIGN_LIST_li.eq(i).attr("data-img"),
+        data_url = DESIGN_LIST_li.eq(i).attr("data-url"),
+        data_des = DESIGN_LIST_li.eq(i).attr("data-des"),
+        data_title = DESIGN_LIST_li.eq(i).attr("data-title");
+      $(".iFCB-B-DESIGN .m-pic img").attr({"src": data_img});
+      $(".iFCB-B-DESIGN .u-tt a").html(data_title);
+      $(".iFCB-B-DESIGN .u-des span").html(data_des);
+      $(".iFCB-B-DESIGN .u-tt a,.iFCB-B-DESIGN .u-des a").attr({"href": data_url});
+    }
+  });
+  jQuery(".iFCB-FOCUS").slide({titCell:".hd ul",mainCell:".bd ul",effect:"leftLoop",autoPlay:true,autoPage:true});
+  
+  $("#pageTop ").on("click",
+    function (A) {
+        A.preventDefault();
+        $("body,html").animate({
+            scrollTop: 0
+        },
+        300)
+    })
+  $(".bj i").click(function(){
+    $(".iFCB-bj,.bj").css({"width":40});
+    $(".bj .content+.clear").show("100");
+    $(".bj .content+.clear").css({right:0});
+  })  
+  $(".bj .content+.clear").click(function() {
+    $(".iFCB-bj,.bj").css({"width":100+"%"});
+    $(this).css({right:-40});
+    $(this).hide();
+  });
+})
+
+</script>
+
+
+
+        </div>
+   
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c479576bef71294701a517eb4b33e2ef";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <script>
+    $(".intro-info-img").scrollLoading();
+    $(".b-pic").scrollLoading();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //在这个过程中，实例也会调用一些 生命周期钩子 ，
+    //这就给我们提供了执行自定义逻辑的机会。例如，created
+    // 这个钩子在实例被创建之后被调用：
+    var app =new Vue({
+        data:{
+            a:3
+        },
+        created:function(){
+            console.log(this.a)
+        }
+    })
+</script>

@@ -1,0 +1,72 @@
+{
+  "list": [
+    {
+      "id": "600100002101",
+      "name": "分期购瑞士手表男士全自动机械表男表防水精钢超薄2019新款潮名表",
+      "price": 120,
+      "quentity": 1,
+      "src": "img/q1.jpg",
+      "parts": [
+        {
+          "partsid": "10001",
+          "partsname": "包装盒"
+        }
+      ]
+    },
+    {
+      "id": "600100002102",
+      "name": "分期购瑞士手表男士全自动机械表男表防水精钢超薄2019新款潮名表",
+      "price": 1750,
+      "quentity": 1,
+      "src": "img/q2.jpg",
+      "parts": [
+        {
+          "partsid": "10002",
+          "partsname": "包装盒"
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "id": 1000001,
+      "name": "陈华盛",
+      "site": "浙江黄山水陆生",
+      "psotCode": "1000001",
+      "tel": "123456789123",
+      "isdefault": true
+    },
+    {
+      "id": 1000002,
+      "name": "陈华盛",
+      "site": "浙江黄山水陆生",
+      "psotCode": "1000002",
+      "tel": "123456789123",
+      "isdefault": false
+    },
+    {
+      "id": 1000004,
+      "name": "陈华盛",
+      "site": "浙江黄山水陆生",
+      "psotCode": "1000004",
+      "tel": "123456789123",
+      "isdefault": false
+    },
+    {
+      "id": 1000005,
+      "name": "陈华盛",
+      "site": "浙江黄山水陆生",
+      "psotCode": "1000005",
+      "tel": "123456789123",
+      "isdefault": false
+    },
+    {
+      "id": 1000003,
+      "name": "陈华盛",
+      "site": "浙江黄山水陆生",
+      "psotCode": "1000003",
+      "tel": "123456789123",
+      "isdefault": false
+    }
+  ]
+}

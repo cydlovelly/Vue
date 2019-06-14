@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-f="count > 0">
+        count值:    {{count}}
+        <div v-for='item in list'>
+                {{item}}
+            </div>
+    </div>
+    <div v-else="count == 0">
+        count值:    {{count}}
+        <div v-for='item in list'>
+            {{item}}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var app =new Vue({
+        el:'#app',
+        data:{
+            count: 5,
+            s:4,
+            list:[2,3,5,6,4]
+        }
+    })
+</script>

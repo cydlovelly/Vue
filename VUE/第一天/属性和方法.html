@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+    <style>
+        #b{
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="b">
+
+    </div>
+</body>
+</html>
+<script>
+    var data ={a:1};
+    var app4 = new Vue({
+        el:'#b',
+        data:{
+           data:data
+        }
+    })
+    console.log(app4.a === data.a);//false
+    console.log(app4.$data === data); // false
+</script>

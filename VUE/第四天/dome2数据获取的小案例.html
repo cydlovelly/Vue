@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="../vue.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #app th{
+            padding:10px 20px;
+            background: rgb(146, 191, 243);
+            border: 1px solid #000;
+        }   
+        #app td{
+            padding:10px 20px;
+            border: 1px solid #000;
+        } 
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form class="form-inline " style="margin-top: 30px;">
+                <label for="exampleInputName2">编号:</label>
+                <input type="number" class="form-control" placeholder="编号" v-model="id">
+                <label for="exampleInputName2">品牌:</label>
+                <input type="text" class="form-control" placeholder="品牌" v-model="pname">
+                <p class="btn btn-primary" v-on:click="adddata">添加信息</p>
+                <input type="text" class="form-control" placeholder="搜索你想查找的品牌!" v-model="updata" />
+        </form>
+        <h1 class="text-danger">{{alert}}</h1>
+        <br />
+        <table class="table table-hover">
+            <tr class="danger">
+                <th>编号</th>
+                <th>品牌</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+            <tr class="warning" v-show="list.length == 0">
+                <td colspan="4" class="text-center">没有信息,请添加</td>
+            </tr>
+            <tr v-for="lista in uplist(list,updata)" class="active">   <!-- 过滤器 -->
+                <td>{{lista.id}}</td>
+                <td>{{lista.name}}</td>
+                <td>{{lista.time}}</td>
+                <td>
+                    <p class="btn btn-danger" v-on:click="deletedata(lista.id)">删除</p>
+                </td>
+            </tr> 
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function(){
+        new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {id:1,name:"奥迪",time:new Date},
+                ],
+                id:"",
+                pname:"",
+                alert:"",
+                updata:""
+            },
+            methods:{
+                adddata(){
+                    //获得创建的数据
+                    if(this.id != "" || this.pname != ""){
+                        var datalist = {id:this.id,name:this.pname,time:new Date()};
+                        //添加到list上
+                     this.list.push(datalist);
+                        //清空输入框
+                        this.id= "";
+                        this.pname="";
+                        this.alert="信息添加成功!";
+                    }else{
+                        this.alert= "信息不能为空!"
+                    }
+                },
+                deletedata(id){
+                    // 0 给用户进行提示,是否删除   
+                    if(!confirm("是否要删除信息!")){
+                        //当用户点击取消按钮的时候阻断这个方法的后续代码
+                        return;
+                    }
+                    // 1 根据传入的id找到索引位置    这里传入的lista 可以自定义  
+                    var index = this.list.findIndex(function(lista){return lista.id  == id});
+                    // 2 截断指定索引位置和长度
+                    this.list.splice(index,1);
+                    this.alert="信息删除成功!"
+                },
+                //搜索   自定义的搜索  
+                uplist(list,value){
+                    return list.filter(function(lista){
+                        return  lista.name.match(value)
+                    })
+                }
+            }
+        })
+
+
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    帅气的一批
+    <div class="app">
+        <greeting></greeting>
+    </div>
+    <div class="app1">
+        <greeting></greeting>
+    </div>
+</body>
+</html>
+<script>
+
+    //组件
+   Vue.component("greeting",{
+       template:'<p>给你们说,这是最好看的人{{name}} <button v-on:click="dd">改名</button></p>',
+       data:function(){
+           return {
+               name:'lly'
+           }
+       },
+       methods:{
+           dd:function(){
+                return this.name = 'luyao'
+           }
+       }
+   })
+    new Vue({
+        el:'.app'
+    });
+    new Vue({
+        el:'.app1'
+    })
+</script>
